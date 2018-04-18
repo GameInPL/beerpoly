@@ -1,0 +1,403 @@
+body
+{
+	background-image: url(../img/tweed.png);
+	/* Background pattern from subtlepatterns.com */
+	margin: 0;
+}
+
+.container
+{
+	background-color: white;
+	width: 1000px;
+	height: 1000px;
+	margin: auto;
+	
+}
+/*Góra*/
+
+.Gora
+{
+	width: 1000px;
+	height: 140px;
+	float: left;
+}
+
+.Wiezienie
+{
+	background-color: orange;
+	width:	140px;
+	height: 140px;
+	float: left;
+
+}
+
+
+.g1
+{
+	background-color: #ff99ff;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g2
+{
+	background-color: #ff99ff;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g3
+{
+	background-color: #33cc33;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g4
+{
+	background-color: #ff99ff;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g5
+{
+	background-color: #000000;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g6
+{
+	background-color: orange;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g7
+{
+	background-color: #3399cc;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g8
+{
+	background-color: orange;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.g9
+{
+	background-color: orange;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+
+.Pauza
+{
+	background-color: red;
+	width:	140px;
+	height: 140px;
+	float: left;
+
+}
+/*Lewo*/
+
+.Lewy
+{
+	
+	width:	140px;
+	height: 720px;
+	float: left;
+	
+	
+}
+
+
+.l1
+{
+	clear: both;
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+	
+}
+
+.l2
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+
+}
+.l3
+{
+	background-color: #714414;
+	width: 140px;
+	height: 80px;
+}
+
+
+.l4
+{
+	background-color: #227314;
+	width: 140px;
+	height: 80px;
+}
+
+.l5
+{
+	background-color: #714414;
+	width: 140px;
+	height: 80px;
+}
+
+.l6
+{
+	background-color: #517314;
+	width: 140px;
+	height: 80px;
+}
+
+.l7
+{
+	background-color: #718314;
+	width: 140px;
+	height: 80px;
+	
+}
+
+.l8
+{
+	background-color: #717319;
+	width: 140px;
+	height: 80px;
+	
+}
+
+.l9
+{
+	background-color: #144814;
+	width: 140px;
+	height: 80px;
+	
+
+}
+
+
+
+/*Środek*/
+
+
+
+.Logo
+{
+	background-color: gray;
+	width:	720px;
+	height: 720px;
+	float: left;
+	
+
+}
+
+/*Prawa czesc*/
+
+
+.Prawy
+{
+	
+	width:	140px;
+	height: 720px;
+	float: left;
+}
+
+
+.p1
+{
+	clear: both;
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+
+.p2
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+.p3
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+
+
+.p4
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+
+.p5
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+
+.p6
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+}
+
+.p7
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+	
+}
+
+.p8
+{
+	background-color: #717314;
+	width: 140px;
+	height: 80px;
+	
+}
+
+.p9
+{
+	background-color: #744814;
+	width: 140px;
+	height: 80px;
+	
+
+}
+
+
+/*Duł*/
+
+.Dul
+{
+
+	width: 1000px;
+	height: 140px;
+	float: left;
+}
+
+.Go
+{
+	background-color: #448867;
+	width: 140px;
+	height: 140px;	
+	float: left;
+}
+
+
+.d1
+{
+	background-color: #554433;
+	width: 80px;
+	height: 140px;
+	background-image: url(../img/Eevee.png);
+	float: left;
+}
+
+.d2
+{
+	background-color: #437819;
+	width: 80px;
+	height: 140px;
+	float: left;
+	
+}
+
+.d3
+{
+	background-color: #787314;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d4
+{
+	background-color: #717344;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d5
+{
+	background-color: #787394;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d6
+{
+	background-color: #787374;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d7
+{
+	background-color: #786315;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d8
+{
+	background-color: #287314;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+.d9
+{
+	background-color: #717314;
+	width: 80px;
+	height: 140px;
+	float: left;
+}
+
+
+.Policjant
+{
+	background-color: #0000ff;
+	width: 140px;
+	height: 140px;	
+	float: left;
+}
+
+
+
+.c
+{
+		clear: both;
+}
