@@ -5,195 +5,87 @@ body
 	margin: 0;
 }
 
-.container
-{
+.container{
 	background-color: white;
 	width: 1000px;
 	height: 1000px;
 	margin: auto;
 	
+	
 }
 /*Góra*/
 
-.Gora
-{
+.gora{
 	width: 1000px;
 	height: 140px;
 	float: left;
 }
 
-.Wiezienie
-{
+.prison{
 	background-color: orange;
 	width:	140px;
 	height: 140px;
 	float: left;
+	filter: brightness(70%);
 
 }
 
+.prison:hover{
+	filter: brightness(100%);
+}
 
-.g1
-{
+.card_g{
 	background-color: #ff99ff;
 	width: 80px;
 	height: 140px;
 	float: left;
+	cursor: pointer;
+	filter: brightness(70%);
+	transition: all .2s ease-in-out;
 }
 
-.g2
-{
-	background-color: #ff99ff;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g3
-{
-	background-color: #33cc33;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g4
-{
-	background-color: #ff99ff;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g5
-{
-	background-color: #000000;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g6
-{
-	background-color: orange;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g7
-{
-	background-color: #3399cc;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g8
-{
-	background-color: orange;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.g9
-{
-	background-color: orange;
-	width: 80px;
-	height: 140px;
-	float: left;
+.card_g:hover{
+	filter: brightness(100%);
 }
 
 
-.Pauza
-{
+.pauza{
 	background-color: red;
 	width:	140px;
 	height: 140px;
 	float: left;
+	filter: brightness(70%);
 
 }
+
+.pauza:hover{
+	
+filter: brightness(100%);	
+}
+
 /*Lewo*/
 
-.Lewy
-{
+.lewy{
 	
 	width:	140px;
 	height: 720px;
 	float: left;
 	
-	
 }
 
 
-.l1
-{
-	clear: both;
+.card_l{
+	cle  ar: both;
 	background-color: #717314;
 	width: 140px;
 	height: 80px;
-	
+	cursor: pointer;
+	filter: brightness(70%);
+	transition: all .2s ease-in-out;
 }
 
-.l2
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-
-}
-.l3
-{
-	background-color: #714414;
-	width: 140px;
-	height: 80px;
-}
-
-
-.l4
-{
-	background-color: #227314;
-	width: 140px;
-	height: 80px;
-}
-
-.l5
-{
-	background-color: #714414;
-	width: 140px;
-	height: 80px;
-}
-
-.l6
-{
-	background-color: #517314;
-	width: 140px;
-	height: 80px;
-}
-
-.l7
-{
-	background-color: #718314;
-	width: 140px;
-	height: 80px;
-	
-}
-
-.l8
-{
-	background-color: #717319;
-	width: 140px;
-	height: 80px;
-	
-}
-
-.l9
-{
-	background-color: #144814;
-	width: 140px;
-	height: 80px;
-	
-
+.card_l:hover{
+	filter: brightness(100%);
 }
 
 
@@ -201,203 +93,88 @@ body
 /*Środek*/
 
 
-
-.Logo
-{
+.logo{
 	background-color: gray;
 	width:	720px;
 	height: 720px;
 	float: left;
-	
-
 }
 
 /*Prawa czesc*/
 
 
-.Prawy
-{
-	
+.prawy{
 	width:	140px;
 	height: 720px;
 	float: left;
 }
 
 
-.p1
-{
-	clear: both;
-	background-color: #717314;
+.card_p{
+	cle  ar: both;
+	background-color: #490969;
 	width: 140px;
 	height: 80px;
+	cursor: pointer;
+	filter: brightness(70%);
+	transition: all .2s ease-in-out;
 }
 
-.p2
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
+.card_p:hover{
+	filter: brightness(100%);
 }
-.p3
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-}
-
-
-.p4
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-}
-
-.p5
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-}
-
-.p6
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-}
-
-.p7
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-	
-}
-
-.p8
-{
-	background-color: #717314;
-	width: 140px;
-	height: 80px;
-	
-}
-
-.p9
-{
-	background-color: #744814;
-	width: 140px;
-	height: 80px;
-	
-
-}
-
 
 /*Duł*/
 
-.Dul
-{
-
+.dul{
 	width: 1000px;
 	height: 140px;
 	float: left;
 }
 
-.Go
-{
+.Go{
 	background-color: #448867;
 	width: 140px;
 	height: 140px;	
 	float: left;
+	filter: brightness(70%);
 }
 
+.Go:hover{
+	filter: brightness(100%);
+}
 
-.d1
-{
-	background-color: #554433;
+.card_d{
+	float: left;
+	background-color: #33ff33;
 	width: 80px;
 	height: 140px;
-	background-image: url(../img/Eevee.png);
-	float: left;
+	cursor: pointer;
+	filter: brightness(70%);
+	transition: all .2s ease-in-out;
 }
 
-.d2
-{
-	background-color: #437819;
-	width: 80px;
-	height: 140px;
-	float: left;
-	
-}
-
-.d3
-{
-	background-color: #787314;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d4
-{
-	background-color: #717344;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d5
-{
-	background-color: #787394;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d6
-{
-	background-color: #787374;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d7
-{
-	background-color: #786315;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d8
-{
-	background-color: #287314;
-	width: 80px;
-	height: 140px;
-	float: left;
-}
-
-.d9
-{
-	background-color: #717314;
-	width: 80px;
-	height: 140px;
-	float: left;
+.card_d:hover{
+	filter: brightness(100%);
 }
 
 
-.Policjant
-{
+
+.police{
 	background-color: #0000ff;
 	width: 140px;
 	height: 140px;	
 	float: left;
+	filter: brightness(70%);
+}
+
+.police:hover{ 
+	filter: brightness(100%);
+	filter: brightness(100%);
 }
 
 
 
-.c
-{
+.c{
 		clear: both;
 }
