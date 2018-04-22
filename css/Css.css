@@ -78,6 +78,10 @@ body
 	cursor: pointer;
 	filter: brightness(70%);
 	transition: all .2s ease-in-out;
+		box-sizing: border-box;
+	border: 1px solid black;
+	border-right:1px solid;
+	border-left:1px solid;
 }
 
 .card_l:hover{
