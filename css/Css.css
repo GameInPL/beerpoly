@@ -21,16 +21,21 @@ body
 	float: left;
 }
 
-.prison{
-	background-color: orange;
-	width:	140px;
-	height: 140px;
+
+.card_big{
+	background-color: #0000ff;
+	width: 140px;
+	height: 140px;	
 	float: left;
 	filter: brightness(70%);
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-right:2px solid;
+	border-left:2px solid;
 
 }
 
-.prison:hover{
+.card_big:hover{ 
 	filter: brightness(100%);
 }
 
@@ -42,6 +47,10 @@ body
 	cursor: pointer;
 	filter: brightness(70%);
 	transition: all .2s ease-in-out;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-right:1px solid;
+	border-left:1px solid;
 }
 
 .card_g:hover{
@@ -49,19 +58,6 @@ body
 }
 
 
-.pauza{
-	background-color: red;
-	width:	140px;
-	height: 140px;
-	float: left;
-	filter: brightness(70%);
-
-}
-
-.pauza:hover{
-	
-filter: brightness(100%);	
-}
 
 /*Lewo*/
 
@@ -132,17 +128,6 @@ filter: brightness(100%);
 	float: left;
 }
 
-.Go{
-	background-color: #448867;
-	width: 140px;
-	height: 140px;	
-	float: left;
-	filter: brightness(70%);
-}
-
-.Go:hover{
-	filter: brightness(100%);
-}
 
 .card_d{
 	float: left;
@@ -155,21 +140,6 @@ filter: brightness(100%);
 }
 
 .card_d:hover{
-	filter: brightness(100%);
-}
-
-
-
-.police{
-	background-color: #0000ff;
-	width: 140px;
-	height: 140px;	
-	float: left;
-	filter: brightness(70%);
-}
-
-.police:hover{ 
-	filter: brightness(100%);
 	filter: brightness(100%);
 }
 
