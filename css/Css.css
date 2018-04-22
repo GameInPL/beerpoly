@@ -10,7 +10,7 @@ body {
 	margin: auto;
 }
 
-.top {
+.top-box {
 	width: 1000px;
 	height: 140px;
 	float: left;
@@ -29,9 +29,26 @@ body {
 
 }
 
-.card_big:hover{
+.card-big:hover{
 	filter: brightness(100%);
 }
+
+.card-big.top {
+	border-bottom:0;
+}
+
+.card-big.bottom {
+	border-top:0;
+}
+
+.card-big.right {
+	border-left:0;
+}
+
+.card-big.left {
+	border-right:0;
+}
+
 
 .card-top{
 	background-color: #ff99ff;
@@ -51,7 +68,7 @@ body {
 	filter: brightness(100%);
 }
 
-.left{
+.left-box{
 	width:	140px;
 	height: 720px;
 	float: left;
@@ -65,7 +82,7 @@ body {
 	cursor: pointer;
 	filter: brightness(70%);
 	transition: all .2s ease-in-out;
-		box-sizing: border-box;
+	box-sizing: border-box;
 	border: 1px solid black;
 	border-right:1px solid;
 	border-left:1px solid;
@@ -82,7 +99,7 @@ body {
 	float: left;
 }
 
-.right{
+.right-box{
 	width:	140px;
 	height: 720px;
 	float: left;
@@ -96,13 +113,17 @@ body {
 	cursor: pointer;
 	filter: brightness(70%);
 	transition: all .2s ease-in-out;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-right:1px solid;
+	border-left:1px solid;
 }
 
 .card-right:hover{
 	filter: brightness(100%);
 }
 
-.bottom{
+.bottom-box{
 	width: 1000px;
 	height: 140px;
 	float: left;
@@ -116,6 +137,10 @@ body {
 	cursor: pointer;
 	filter: brightness(70%);
 	transition: all .2s ease-in-out;
+	box-sizing: border-box;
+	border: 1px solid black;
+	border-right:1px solid;
+	border-left:1px solid;
 }
 
 .card-bottom:hover{
