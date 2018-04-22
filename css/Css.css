@@ -16,6 +16,8 @@ body {
 	float: left;
 }
 
+
+
 .card-big{
 	background-color: #0000ff;
 	width: 140px;
@@ -62,10 +64,20 @@ body {
 	border: 1px solid black;
 	border-right:1px solid;
 	border-left:1px solid;
+	position:relative;
 }
 
 .card-top:hover{
 	filter: brightness(100%);
+}
+
+
+.card-top .lable{
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color:red;
 }
 
 .left-box{
