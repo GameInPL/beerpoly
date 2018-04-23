@@ -193,6 +193,16 @@ body {
 	background-color:red;
 }
 
+#player
+{
+	width: 30px;
+	height: 30px;
+	background-color: yellow;
+
+	
+	position: fixed;
+}
+
 .clear{
 		clear: both;
 }
