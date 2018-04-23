@@ -193,13 +193,12 @@ body {
 	background-color:red;
 }
 
-#player
-{
+#player{
 	width: 30px;
 	height: 30px;
 	background-color: yellow;
-
-	
+	margin-left: 20px;
+	margin-top: 10px;
 	position: fixed;
 }
 
