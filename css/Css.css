@@ -202,6 +202,48 @@ body {
 	position: fixed;
 }
 
+
+/*
+#cube{
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	margin-left: 20px;
+	margin-top: 10px;
+	position: absolute;
+}
+*/
+
+
+    button {
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 3px solid black;
+      padding: 10px 20px;
+      font-size: 20px;
+
+      transition: .3s;
+    }
+
+    button:hover {
+      background-color: #000;
+      color: white;
+    }
+
+    #cube {
+      width: 60px;
+      height: 60px;
+      background-color: cornflowerblue;
+      margin: 10px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+	  position: absolute;
+
+    }
+
 .clear{
 		clear: both;
 }
