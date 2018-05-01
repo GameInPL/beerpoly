@@ -231,7 +231,7 @@ body {
       color: white;
     }
 
-    #cube {
+    .cube1 {
       width: 60px;
       height: 60px;
       background-color: cornflowerblue;
@@ -240,10 +240,32 @@ body {
       text-align: center;
       font-weight: bold;
       color: white;
-	  position: absolute;
+	  float: left;
+	 
+
+    }
+	
+	 .cube2 {
+      width: 60px;
+      height: 60px;
+      background-color: cornflowerblue;
+      margin: 10px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+	  float: left;
+
 
     }
 
+	.box-cube{
+	  width: 160px;
+      height: 80px;
+	  background-color: #696969;
+	  position: absolute; 
+	}
+	
 .clear{
 		clear: both;
 }
