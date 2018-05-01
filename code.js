@@ -11,7 +11,7 @@
    
 	//tworzymy element div, ktory dodamy do dokumsntu (strony)
       const div = document.createElement("div");
-	    div.className = "cube1";
+	    div.id = "cube1";
 		
 		
       div.textContent = wynikLosowania;
@@ -41,7 +41,7 @@
       const wynikLosowania = Math.floor(Math.random() * 6 + 1);
 
       const div = document.createElement("div");
-	    div.className = "cube2";
+	    div.id = "cube2";
 		
       div.textContent = wynikLosowania;
       
@@ -55,6 +55,7 @@
     button.addEventListener("click", losowanie);
 	
 	}
+	
 	
 	
 	if(result1==6 && result2==6) {

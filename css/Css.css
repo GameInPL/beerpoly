@@ -231,40 +231,40 @@ body {
       color: white;
     }
 
-    .cube1 {
+    #cube1 {
       width: 60px;
       height: 60px;
       background-color: cornflowerblue;
       margin: 10px;
+      margin-right: 100px;
       line-height: 60px;
       text-align: center;
       font-weight: bold;
       color: white;
 	  float: left;
-	 
+	  position: absolute; 
+
 
     }
 	
-	 .cube2 {
+	 #cube2 {
       width: 60px;
       height: 60px;
       background-color: cornflowerblue;
-      margin: 10px;
+      margin-left: 100px;
+	  margin-top: 10px;
+	  margin-right: 10px;
+	  margin-bottom: 10px;
       line-height: 60px;
       text-align: center;
       font-weight: bold;
       color: white;
 	  float: left;
-
-
+	  position: absolute;
+	  
     }
 
-	.box-cube{
-	  width: 160px;
-      height: 80px;
-	  background-color: #696969;
-	  position: absolute; 
-	}
+
 	
 .clear{
 		clear: both;
