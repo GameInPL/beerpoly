@@ -194,25 +194,27 @@ body {
 }
 
 #player{
-	width: 30px;
-	height: 30px;
-	background-color: yellow;
-	margin-left: 20px;
-	margin-top: 10px;
-	position: fixed;
-}
-
-
-/*
-#cube{
-	width: 100px;
-	height: 100px;
+	width: 60px;
+	height: 50px;
 	background-color: yellow;
 	margin-left: 20px;
 	margin-top: 10px;
 	position: absolute;
+	
+	
+	height: 50vh;
+    background: url('../img/motor.png') no-repeat;
+    background-size: auto 8%;
+    background-position: top 20% left 5%, ;
+    -webkit-transition: all 10s easy-out;
+    transition: all 3s ease;
 }
-*/
+
+#player:hover {
+    background-position: top 20% left 85%;
+}
+
+
 
 
     button {
@@ -231,6 +233,28 @@ body {
       color: white;
     }
 
+	
+	
+	 @keyframes random1
+      {
+        0% {background-color: cornflowerblue ;}
+		50%	{background-color: #000;}
+		80% {transform: rotate(-1780deg);}
+        100% {background-color: cornflowerblue;transform: rotate(-1800deg);}
+      }
+	  
+	  @keyframes random2
+      {
+        0% {background-color: cornflowerblue;}
+		50%	{background-color: #000;}
+		80% {transform: rotate(1780deg);}
+        100% {background-color: cornflowerblue;transform: rotate(1800deg);}
+      }
+
+     
+	
+	
+	
     #cube1 {
       width: 60px;
       height: 60px;
@@ -243,6 +267,12 @@ body {
       color: white;
 	  float: left;
 	  position: absolute; 
+	  
+	  
+	  
+	  animation-name:random1;
+      animation-duration:3s;
+      animation-iteration-count: 1;
 
 
     }
@@ -262,7 +292,13 @@ body {
 	  float: left;
 	  position: absolute;
 	  
+	  animation-name:random2;
+      animation-duration:3s;
+      animation-iteration-count: 1;
+	  
     }
+	
+	
 
 
 	

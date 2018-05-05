@@ -54,6 +54,9 @@
 
     button.addEventListener("click", losowanie);
 	
+	const oDiv = document.getElementById('cube2');
+	oDiv.parentNode.removeChild(oDiv);
+	
 	}
 	
 	
@@ -65,4 +68,60 @@
 	
 	
 	
+	
+	
+		function movePawn(player) {
+	//... do something math
+	if(player>0) setTimeout(movePawn.bind(this, counter-1), 1000);
+	// 1000 = 1s
+}
+	
+	
+	
+
+	
+
+
+	var a = (result1);
+	var b = (result2);
+	var z = a + b;
+	document.write("Wyniki:"+z);
+		
+
+
+
+		
+			
+	/*
+	
+	  function suma (tablica = [2,5]) {
+var suma = 0;
+for(var i = 0; i < tablica.length; i++) { 
+  suma = suma + tablica[i]; 
+}
+console.log('Suma elementów w tablicy wynosi: ' + suma);
+console.log('------------');
+var iloczyn = 1;
+for(var j = 0; j < tablica.length; j++) { 
+  iloczyn = iloczyn * tablica[j]; 
+}
+console.log('Iloczyn elementów w tablicy wynosi: ' + iloczyn);
+}
+suma();
+	*/
+	/////
+	/*
+			function movePawn(counter) {
+		//... do something math
+		if(counter>0) setTimeout(movePawn.bind(this, counter-1), 1000);
+		// 1000 = 1s
+		}
+
+		movePawn(3); // przesuwa o 3 pola
+			
+	
+
+*/
+
+ 
 	
