@@ -1,4 +1,5 @@
 
+	
 	//    Tablica przechowująca wyniki
     const result1 = [];{
 
@@ -21,6 +22,7 @@
       
     //dodaje div do elementu 
 	document.getElementById("cube-box").appendChild(div);
+	document.getElementById("cube-box").appendChild(div);
     }
 
 
@@ -34,6 +36,8 @@
 	
 	
 //2x to samo	
+
+
 
     const result2 = [];{
     const losowanie = function() {
@@ -54,8 +58,7 @@
 
     button.addEventListener("click", losowanie);
 	
-	const oDiv = document.getElementById('cube2');
-	oDiv.parentNode.removeChild(oDiv);
+	
 	
 	}
 	
@@ -67,25 +70,26 @@
 	
 	
 	
+	/*
 	
-	
-	
-		function movePawn(player) {
+	function movePawn(counter) {
 	//... do something math
-	if(player>0) setTimeout(movePawn.bind(this, counter-1), 1000);
+	if(counter>0) setTimeout(movePawn.bind(this, counter-1), 1000);
 	// 1000 = 1s
-}
-	
-	
-	
+	}
 
+	movePawn(3); // przesuwa o 3 pola
 	
+	
+	
+*/
 
 
-	var a = (result1);
-	var b = (result2);
-	var z = a + b;
-	document.write("Wyniki:"+z);
+
+	let a = (result1[0]);
+	let b = (result2[0]);
+	let x = a + b;
+	document.write("Wyniki:"+x);
 		
 
 
@@ -123,5 +127,6 @@ suma();
 
 */
 
- 
+ /*const oDiv = document.getElementById('cube2');
+	oDiv.parentNode.removeChild(oDiv);*/
 	

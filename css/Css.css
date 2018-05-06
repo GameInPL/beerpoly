@@ -31,6 +31,7 @@ body {
 
 .card-big:hover{
 	filter: brightness(100%);
+	border: 1px solid red;
 }
 
 .card-big.top {
@@ -67,6 +68,7 @@ body {
 
 .card-top:hover{
 	filter: brightness(100%);
+	border: 1px solid red;
 }
 
 .card-top .label{
@@ -100,6 +102,7 @@ body {
 
 .card-left:hover{
 	filter: brightness(100%);
+	border: 1px solid red;
 }
 
 .card-left .label {
@@ -143,6 +146,7 @@ body {
 
 .card-right:hover{
 	filter: brightness(100%);
+	border: 1px solid red;
 }
 
 .card-right .label {
@@ -183,6 +187,7 @@ body {
 
 .card-bottom:hover{
 	filter: brightness(100%);
+	border: 1px solid red;
 }
 
 .card-bottom .label{
