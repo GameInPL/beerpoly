@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <link rel="icon" type="ico" href="img/Monopoly.ico" sizes="256x256" />
   <button>Losuj</button>
@@ -9,130 +10,132 @@
   <link rel="stylesheet" href="css/css.css">
   <script src="code.js"></script>
 </head>
+
 <body>
-  <div id="cube-box"></div>
-  <div class="container">
+  <div class="container" id="container">
+    <!-- players -->
+    <div id="player1"></div>
+
+    <!-- board -->
     <div class="top-box">
-      <div class="card-big top left">Izba wytrzeźwień</div>
-      <div class="card-top" id="n1">
+      <div class="card-big top left" id="p0">START</div>
+      <div class="card-top" id="p1">
         <div class="label">Zakład goplany</div>
       </div>
-      <div class="card-top" id="n2">
+      <div class="card-top" id="p2">
       </div>
-      <div class="card-top" id="n3">
+      <div class="card-top" id="p3">
         <div class="label">Stare zoo</div>
       </div>
-      <div class="card-top" id="n4">
+      <div class="card-top" id="p4">
         <div class="label">Rynek jeżycki</div>
       </div>
-      <div class="card-top" id="n5">
+      <div class="card-top" id="p5">
       </div>
-      <div class="card-top" id="n6">
+      <div class="card-top" id="p6">
         <div class="label">Bałtyk tower</div>
       </div>
-      <div class="card-top" id="n7">
+      <div class="card-top" id="p7">
         <div class="label">Palmiarnia</div>
       </div>
-      <div class="card-top" id="n8">
+      <div class="card-top" id="p8">
       </div>
-      <div class="card-top" id="n9">
+      <div class="card-top" id="p9">
         <div class="label">Stadion miejski</div>
       </div>
-      <div class="card-big top right">Okrąglak (punkt widokowy) - można dać uniwersytet ekonomiczny bo okrąglak jest 2x</div>
+      <div class="card-big top right" id="p10">Izba wytrzeźwień</div>
     </div>
-
 
     <div class="center-box">
       <div class="left-box">
-        <div class="card-left" id="e1">
+        <div class="card-left" id="p39">
           <div class="label">Stadion miejscki</div>
         </div>
-        <div class="card-left" id="e2">
+        <div class="card-left" id="p38">
           <div class="label">Teatr nowy</div>
         </div>
-        <div class="card-left" id="e3">
+        <div class="card-left" id="p37">
         </div>
-        <div class="card-left" id="e4">
+        <div class="card-left" id="p36">
           <div class="label">Zakłady Hipolita Cegielskiego</div>
         </div>
-        <div class="card-left" id="e5">
+        <div class="card-left" id="p35">
         </div>
-        <div class="card-left" id="e6">
+        <div class="card-left" id="p34">
           <div class="label">Kino (Biedra)</div>
         </div>
-        <div class="card-left" id="e7">
+        <div class="card-left" id="p33">
           <div class="label">Aquanet</div>
         </div>
-        <div class="card-left" id="e8">
+        <div class="card-left" id="p32">
         </div>
-        <div class="card-left" id="e9">
+        <div class="card-left" id="p31">
           <div class="label">SPOT</div>
         </div>
       </div>
+
       <div class="centrum-box">
-        <div class="logo"></div>
+        <div class="logo">
+          <div id="cube-box"></div>
+        </div>
       </div>
 
-
       <div class="right-box">
-        <div class="card-right" id="w1">
+        <div class="card-right" id="p11">
           <div class="label">Port Ławica</div>
         </div>
-        <div class="card-right" id="w2">
+        <div class="card-right" id="p12">
           <div class="label">Rynek łazarski</div>
         </div>
-        <div class="card-right" id="w3">
+        <div class="card-right" id="p13">
         </div>
-        <div class="card-right" id="w4">
+        <div class="card-right" id="p14">
           <div class="label">Park Wilsona</div>
         </div>
-        <div class="card-right" id="w5">
+        <div class="card-right" id="p15">
         </div>
-        <div class="card-right" id="w6">
+        <div class="card-right" id="p16">
         </div>
-        <div class="card-right" id="w7">
+        <div class="card-right" id="p17">
           <div class="label">Pixel</div>
         </div>
-        <div class="card-right" id="w8">
+        <div class="card-right" id="p18">
         </div>
-        <div class="card-right" id="w9">
+        <div class="card-right" id="p19">
           <div class="label">Biblioteka raczyńskich</div>
         </div>
       </div>
     </div>
 
-
     <div class="bottom-box">
-      <div class="card-big bottom left"></div>
-
-      <div id="player"></div>
-
-      <div class="card-bottom" id="s1">
+      <div class="card-big bottom left" id="p30">Okrąglak (punkt widokowy) - można dać uniwersytet ekonomiczny bo okrąglak jest 2x</div>
+      <div class="card-bottom" id="p29">
         <div class="label">31 baza lotnicza</div>
       </div>
-      <div class="card-bottom" id="s2">
+      <div class="card-bottom" id="p28">
         <div class="label">Malta</div>
       </div>
-      <div class="card-bottom" id="s3">
+      <div class="card-bottom" id="p27">
       </div>
-      <div class="card-bottom" id="s4">
+      <div class="card-bottom" id="p26">
         <div class="label">Stary browar</div>
       </div>
-      <div class="card-bottom" id="s5">
+      <div class="card-bottom" id="p25">
       </div>
-      <div class="card-bottom" id="s6">
+      <div class="card-bottom" id="p24">
       </div>
-      <div class="card-bottom" id="s7">
+      <div class="card-bottom" id="p23">
         <div class="label">Filharmonia</div>
       </div>
-      <div class="card-bottom" id="s8">
+      <div class="card-bottom" id="p22">
       </div>
-      <div class="card-bottom" id="s9">
+      <div class="card-bottom" id="p21">
         <div class="label">Okrąglak</div>
       </div>
-      <div class="card-big bottom right">Idziesz do izby wytrzeźwień</div>
+      <div class="card-big bottom right" id="p20">Idziesz do izby wytrzeźwień</div>
     </div>
     <div class="clear"></div>
   </div>
 </body>
+
 </html>

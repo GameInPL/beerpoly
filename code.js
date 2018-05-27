@@ -1,9 +1,12 @@
 (function init() {
   const button = document.querySelector('button');
   button.addEventListener('click', rollOfDices);
+  window.addEventListener('keydown', moveSelection);
 })();
 
 const lotery = function() {}
+
+const prisonNumber = 10;
 
 //  funkcja odpowiedzialna za losowanie i umieszczanie liczby na stronie internetowej
 function rollOfDices() {
@@ -18,7 +21,8 @@ function rollOfDices() {
   } else {
     // idziemy value pól do przozdu
     // TODO: ...
-		console.log('wylosowano', value);
+    console.log('wylosowano', value);
+    movePlayer1(value);
   }
 }
 
@@ -30,11 +34,13 @@ function secondRollOfDices(value) {
   //jeśli wykulamy 6 + 6 drugi raz, idziemy do więzienia
   if (value == 24) {
     //idziesz do więzienia
-    alert('go to prison')
+    alert('go to prison');
+    movePlayer1To(prisonNumber);
   } else {
     // idziemy value pól do przozdu
     // TODO: ...
-		console.log('wylosowano', value);
+    console.log('wylosowano', value);
+    movePlayer1(value);
   }
 }
 
@@ -50,103 +56,49 @@ function rollOfDice($cubeBox, id) {
   return value;
 }
 
-
-
-
-
-
-
-
-
-
-function leftArrowPressed() {
-            var element = document.getElementById("motor");
-            element.style.left = parseInt(element.style.left) - 80 + 'px';
-            }
-
-            function rightArrowPressed() {
-            var element = document.getElementById("motor");
-            element.style.left = parseInt(element.style.left) + 80 + 'px';
-
-            }
-
-            function upArrowPressed() {
-            var element = document.getElementById("motor");
-            element.style.top = parseInt(element.style.top) - 80 + 'px';
-            }
-
-            function downArrowPressed() {
-            var element = document.getElementById("motor");
-            element.style.top = parseInt(element.style.top) + 80 + 'px';
-            }
-
-            function moveSelection(evt) {
-                switch (evt.keyCode) {
-                    case 37:
-                    leftArrowPressed();
-                    break;
-                    case 39:
-                    rightArrowPressed();
-                    break;
-                    case 38:
-                    upArrowPressed();
-                    break;
-                    case 40:
-                    downArrowPressed();
-                    break;
-                    }
-                };
-
-        function docReady()
-        {
-
-          window.addEventListener('keydown', moveSelection);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-/*
-
-Animujemy animację przez kolejne pola. Zadanie zawiera przykładowe rozwiązanie z podpowiedziami.
-
-1. Przygotowujemy id na kolejnych polach w formie (field + id). Nie jak do tej pory osobne id dla każdej strony planszy.
-
-2. Do css dodajemy transition, żeby pionek się animował (dodajemy do niegopozycję absolutną w na planszy)
-
-3. Tworzymy pętle w js z zmianą pozycji danego pionka na kolejne elementy (w przykładach). Między kolejnymi iteracjami dodajnemy setTimeout tz oczekiwanie
-
-np
-function movePawn(counter) {
-//... do something math
-if(counter>0)  setTimeout(movePawn.bind(this, counter-1), 1000);
-// 1000 = 1s
+function movePlayer(playerElement, counter) {
+  var fieldNumber = playerElement.getAttribute("fieldNumber") || 0;
+  fieldNumber = (parseInt(fieldNumber) + counter) % 40;
+  movePlayerTo(playerElement, fieldNumber)
 }
 
-movePawn(3); // przesuwa o 3 pola
+function movePlayerTo(playerElement, fieldNumber) {
+  var destElement = document.getElementById('p'+fieldNumber);
+  var destRect = destElement.getBoundingClientRect();
+  var containerElement = document.getElementById('container');
+  var containerRect = containerElement.getBoundingClientRect();
+  playerElement.style.top = (destRect.top - containerRect.top) + 'px';
+  playerElement.style.left = (destRect.left - containerRect.left) + 'px';
+  playerElement.setAttribute("fieldNumber", fieldNumber);
+}
 
-Ta funkcja wywołuje siebie rekurencyjnie
+function movePlayer1(counter) {
+  var element = document.getElementById("player1");
+  movePlayer(element, counter);
+}
 
+function movePlayer1To(counter) {
+  var element = document.getElementById("player1");
+  movePlayerTo(element, counter);
+}
 
-Linki:
-- promise - https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Promise
-- transition - https://www.w3schools.com/css/css3_transitions.asp
-transitio example: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/
-- pobieranie pozycji elementu - https://www.kirupa.com/html5/get_element_position_using_javascript.htm
-
-
-
-*/
+function moveSelection(e) {
+  switch (e.keyCode) {
+    case 37:
+      e.preventDefault();
+      movePlayer1(-1);
+      break;
+    case 39:
+      e.preventDefault();
+      movePlayer1(1);
+      break;
+    case 38:
+      e.preventDefault();
+      movePlayer1(-1);
+      break;
+    case 40:
+      e.preventDefault();
+      movePlayer1(1);
+      break;
+  }
+};

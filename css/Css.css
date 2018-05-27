@@ -8,6 +8,7 @@ body {
   width: 1000px;
   height: 1000px;
   margin: auto;
+  position: relative;
 }
 
 .top-box {
@@ -196,23 +197,22 @@ body {
   background-color: red;
 }
 
-#player {
-  width: 60px;
-  height: 50px;
-  background-color: yellow;
+#player1 {
   margin-left: 20px;
   margin-top: 10px;
   position: absolute;
-  height: 50vh;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
   background: url('../img/motor.png') no-repeat;
-  background-size: auto 8%;
-  background-position: top 20% left 5%, ;
+  background-size: 60px 60px;
   -webkit-transition: all 10s easy-out;
   transition: all 3s ease;
 }
 
-#player:hover {
-  background-position: top 20% left 85%;
+#player1:hover {
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 button {
