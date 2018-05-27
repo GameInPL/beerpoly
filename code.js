@@ -118,40 +118,7 @@ function leftArrowPressed() {
 
 
 
-        const circle = document.querySelector(".circle");
-            const info = document.querySelector(".info");
-
-            const move = (e) => {
-              console.log(e.keyCode)
-              //37 to klawisz strzałki w lewo
-              info.textContent = `wartość x: ${circle.offsetLeft}, wartość y: ${circle.offsetTop}`;
-              switch (e.keyCode) {
-                case 37:
-                  circle.style.left = circle.offsetLeft - 14 + "px";
-                  break;
-                case 38:
-                  circle.style.top = circle.offsetTop - 14 + "px";
-                  break;
-                case 39:
-                  circle.style.left = circle.offsetLeft + 14 + "px";
-                  break;
-                case 40:
-                  circle.style.top = circle.offsetTop + 14 + "px";
-                  break;
-                case 32:
-                  const red = Math.floor(Math.random() * 256) //0-255
-                  const green = Math.floor(Math.random() * 256) //0-255
-                  const blue = Math.floor(Math.random() * 256) //0-255
-                  circle.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-                  break;
-                default:
-                  info.textContent = "kliknięte cokolwiek";
-                  break;
-              }
-            }
-
-            window.addEventListener("keydown", move)
-
+      
 /*
 
 Animujemy animację przez kolejne pola. Zadanie zawiera przykładowe rozwiązanie z podpowiedziami.
