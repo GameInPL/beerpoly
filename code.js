@@ -51,62 +51,135 @@ function rollOfDice($cubeBox, id) {
 }
 
 
+
+
+
+
+
+
+
+
+function leftArrowPressed() {
+            var element = document.getElementById("motor");
+            element.style.left = parseInt(element.style.left) - 80 + 'px';
+            }
+
+            function rightArrowPressed() {
+            var element = document.getElementById("motor");
+            element.style.left = parseInt(element.style.left) + 80 + 'px';
+
+            }
+
+            function upArrowPressed() {
+            var element = document.getElementById("motor");
+            element.style.top = parseInt(element.style.top) - 80 + 'px';
+            }
+
+            function downArrowPressed() {
+            var element = document.getElementById("motor");
+            element.style.top = parseInt(element.style.top) + 80 + 'px';
+            }
+
+            function moveSelection(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                    leftArrowPressed();
+                    break;
+                    case 39:
+                    rightArrowPressed();
+                    break;
+                    case 38:
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+
+          window.addEventListener('keydown', moveSelection);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const circle = document.querySelector(".circle");
+            const info = document.querySelector(".info");
+
+            const move = (e) => {
+              console.log(e.keyCode)
+              //37 to klawisz strzałki w lewo
+              info.textContent = `wartość x: ${circle.offsetLeft}, wartość y: ${circle.offsetTop}`;
+              switch (e.keyCode) {
+                case 37:
+                  circle.style.left = circle.offsetLeft - 14 + "px";
+                  break;
+                case 38:
+                  circle.style.top = circle.offsetTop - 14 + "px";
+                  break;
+                case 39:
+                  circle.style.left = circle.offsetLeft + 14 + "px";
+                  break;
+                case 40:
+                  circle.style.top = circle.offsetTop + 14 + "px";
+                  break;
+                case 32:
+                  const red = Math.floor(Math.random() * 256) //0-255
+                  const green = Math.floor(Math.random() * 256) //0-255
+                  const blue = Math.floor(Math.random() * 256) //0-255
+                  circle.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+                  break;
+                default:
+                  info.textContent = "kliknięte cokolwiek";
+                  break;
+              }
+            }
+
+            window.addEventListener("keydown", move)
+
 /*
 
-	function movePawn(counter) {
-	//... do something math
-	if(counter>0) setTimeout(movePawn.bind(this, counter-1), 1000);
-	// 1000 = 1s
-	}
+Animujemy animację przez kolejne pola. Zadanie zawiera przykładowe rozwiązanie z podpowiedziami.
 
-	movePawn(3); // przesuwa o 3 pola
+1. Przygotowujemy id na kolejnych polach w formie (field + id). Nie jak do tej pory osobne id dla każdej strony planszy.
+
+2. Do css dodajemy transition, żeby pionek się animował (dodajemy do niegopozycję absolutną w na planszy)
+
+3. Tworzymy pętle w js z zmianą pozycji danego pionka na kolejne elementy (w przykładach). Między kolejnymi iteracjami dodajnemy setTimeout tz oczekiwanie
+
+np
+function movePawn(counter) {
+//... do something math
+if(counter>0)  setTimeout(movePawn.bind(this, counter-1), 1000);
+// 1000 = 1s
+}
+
+movePawn(3); // przesuwa o 3 pola
+
+Ta funkcja wywołuje siebie rekurencyjnie
+
+
+Linki:
+- promise - https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Promise
+- transition - https://www.w3schools.com/css/css3_transitions.asp
+transitio example: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/
+- pobieranie pozycji elementu - https://www.kirupa.com/html5/get_element_position_using_javascript.htm
 
 
 
 */
-
-
-/*
-let a = (result1[0]);
-let b = (result2[0]);
-let x = a + b;
-document.write('Wyniki:' + x);
-*/
-
-
-
-
-
-/*
-
-	  function suma (tablica = [2,5]) {
-var suma = 0;
-for(var i = 0; i < tablica.length; i++) {
-  suma = suma + tablica[i];
-}
-console.log('Suma elementów w tablicy wynosi: ' + suma);
-console.log('------------');
-var iloczyn = 1;
-for(var j = 0; j < tablica.length; j++) {
-  iloczyn = iloczyn * tablica[j];
-}
-console.log('Iloczyn elementów w tablicy wynosi: ' + iloczyn);
-}
-suma();
-	*/
-/////
-/*
-			function movePawn(counter) {
-		//... do something math
-		if(counter>0) setTimeout(movePawn.bind(this, counter-1), 1000);
-		// 1000 = 1s
-		}
-
-		movePawn(3); // przesuwa o 3 pola
-
-
-
-*/
-
-/*const oDiv = document.getElementById('cube2');
-	oDiv.parentNode.removeChild(oDiv);*/
