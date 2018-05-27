@@ -1,5 +1,5 @@
 (function init() {
-  const button = document.querySelector('button');
+  const button = document.querySelector('body > button');
   button.addEventListener('click', rollOfDices);
   window.addEventListener('keydown', moveSelection);
 })();
