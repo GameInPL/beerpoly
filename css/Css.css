@@ -1,6 +1,8 @@
 body {
   background-image: url(../img/tweed.png);
   margin: 0;
+  font-family: Arial;
+
 }
 
 .container {
@@ -266,7 +268,7 @@ button:hover {
   width: 60px;
   height: 60px;
   background-color: cornflowerblue;
-  margin: 10px;
+  margin: 50px;
   margin-right: 100px;
   line-height: 60px;
   text-align: center;
@@ -283,10 +285,10 @@ button:hover {
   width: 60px;
   height: 60px;
   background-color: cornflowerblue;
-  margin-left: 100px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-left: 150px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   line-height: 60px;
   text-align: center;
   font-weight: bold;
