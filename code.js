@@ -74,13 +74,26 @@ function movePlayerTo(playerElement, fieldNumber) {
 
 function movePlayer1(counter) {
   var element = document.getElementById("player1");
-  movePlayer(element, counter);
+  const time = 1000;
+  function step(couner){
+    movePlayer(element, 1);
+    counter--;
+    if(counter>0) {
+      setTimeout(step, time);
+    }
+  }
+  step();
 }
 
 function movePlayer1To(counter) {
   var element = document.getElementById("player1");
   movePlayerTo(element, counter);
 }
+
+//////
+
+////
+
 
 function moveSelection(e) {
   switch (e.keyCode) {

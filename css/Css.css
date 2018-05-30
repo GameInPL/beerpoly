@@ -211,12 +211,8 @@ body {
   background: url('../img/motor.png') no-repeat;
   background-size: 60px 60px;
   -webkit-transition: all 10s easy-out;
-  transition: all 3s ease;
-}
+  transition: all 0.3s linear;
 
-#player1:hover {
-  margin-left: 30px;
-  margin-top: 20px;
 }
 
 button {
