@@ -211,7 +211,7 @@ body {
   background: url('../img/motor.png') no-repeat;
   background-size: 60px 60px;
   -webkit-transition: all 10s easy-out;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 
 }
 

@@ -74,7 +74,7 @@ function movePlayerTo(playerElement, fieldNumber) {
 
 function movePlayer1(counter) {
   var element = document.getElementById("player1");
-  const time = 1000;
+  const time = 200;
   function step(couner){
     movePlayer(element, 1);
     counter--;
