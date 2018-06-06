@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  background-color: white;
+  background-color: black;
   width: 1000px;
   height: 1000px;
   margin: auto;
@@ -214,6 +214,19 @@ body {
   transition: all 0.2s linear;
 
 }
+
+
+.button_player{
+  display: block;
+  margin: 5px auto;
+  background-color: #fff;
+  border: 3px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: .3s;
+  float: left;
+}
+
 
 button {
   display: block;
