@@ -5,6 +5,11 @@ body {
 
 }
 
+h1{
+  margin: 20px;
+}
+
+
 .container {
   background-color: black;
   width: 1000px;
@@ -218,13 +223,19 @@ body {
 
 .button_player{
   display: block;
-  margin: 5px auto;
+  margin: 20px ;
   background-color: #fff;
   border: 3px solid black;
   padding: 10px 20px;
   font-size: 20px;
   transition: .3s;
   float: left;
+}
+
+.button_player:hover {
+  background-color: #000;
+  color: white;
+  border: 3px solid white;
 }
 
 
@@ -241,6 +252,7 @@ button {
 button:hover {
   background-color: #000;
   color: white;
+  border: 3px solid white;
 }
 
 @keyframes random1 {
