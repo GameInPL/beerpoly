@@ -4,6 +4,12 @@
   window.addEventListener('keydown', moveSelection);
 })();
 
+(function initt() {
+  const input = document.getElementById('number_1');
+  input.addEventListener('click', number_1);
+
+})();
+
 const lotery = function() {}
 
 const prisonNumber = 10;
