@@ -1,13 +1,15 @@
+var playerNumber;
+
 (function init() {
+  playerNumber = getParameterByName('players') || 2;
+  playerNumber = playerNumber<=6 ? playerNumber : 6;
+  playerNumber = playerNumber<2 ? 2 : playerNumber;
+
+  console.log('dupa players', playerNumber);
+
   const button = document.getElementById('rollOfDicesButton');
   button.addEventListener('click', rollOfDices);
   window.addEventListener('keydown', moveSelection);
-})();
-
-(function initt() {
-  const input = document.getElementById('number_1');
-  input.addEventListener('click', number_1);
-
 })();
 
 const lotery = function() {}
