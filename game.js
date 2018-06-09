@@ -1,4 +1,5 @@
 var playerNumber;
+var roundNumber = 0;
 
 (function init() {
   playerNumber = getParameterByName('players') || 2;
@@ -18,6 +19,11 @@ var playerNumber;
   }
 })();
 
+function getCurrentPlayer() {
+  return roundNumber % playerNumber;
+}
+
+
 const lotery = function() {}
 
 const prisonNumber = 10;
@@ -36,8 +42,9 @@ function rollOfDices() {
     // idziemy value pól do przozdu
     // TODO: ...
     console.log('wylosowano', value);
-    movePlayer1(value);
+    movePlayer(getCurrentPlayer(), value);
   }
+  roundNumber++;
 }
 
 function secondRollOfDices(value) {
@@ -54,7 +61,7 @@ function secondRollOfDices(value) {
     // idziemy value pól do przozdu
     // TODO: ...
     console.log('wylosowano', value);
-    movePlayer1(value);
+    movePlayer(getCurrentPlayer(), value);
   }
 }
 
@@ -70,11 +77,11 @@ function rollOfDice($cubeBox, id) {
   return value;
 }
 
-function movePlayer(playerElement, counter) {
+/*function movePlayer(playerElement, counter) {
   var fieldNumber = playerElement.getAttribute("fieldNumber") || 0;
   fieldNumber = (parseInt(fieldNumber) + counter) % 40;
   movePlayerTo(playerElement, fieldNumber)
-}
+}*/
 
 function movePlayerTo(playerElement, fieldNumber) {
   var destElement = document.getElementById('p'+fieldNumber);
@@ -86,11 +93,13 @@ function movePlayerTo(playerElement, fieldNumber) {
   playerElement.setAttribute("fieldNumber", fieldNumber);
 }
 
-function movePlayer1(counter) {
-  var element = document.getElementById("player1");
+function movePlayer(playerNumber, counter) {
+  var playerElement = document.getElementById("player"+playerNumber);
   const time = 200;
   function step(couner){
-    movePlayer(element, 1);
+    var fieldNumber = playerElement.getAttribute("fieldNumber") || 0;
+    fieldNumber = (parseInt(fieldNumber) + 1) % 40;
+    movePlayerTo(playerElement, fieldNumber)
     counter--;
     if(counter>0) {
       setTimeout(step, time);
