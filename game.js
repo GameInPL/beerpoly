@@ -5,11 +5,17 @@ var playerNumber;
   playerNumber = playerNumber<=6 ? playerNumber : 6;
   playerNumber = playerNumber<2 ? 2 : playerNumber;
 
-  console.log('dupa players', playerNumber);
-
   const button = document.getElementById('rollOfDicesButton');
   button.addEventListener('click', rollOfDices);
   window.addEventListener('keydown', moveSelection);
+
+  // add palyers
+  var $container = document.getElementById('container');
+  for(var i=0; i<playerNumber; i++) {
+    var $player = document.createElement("div");
+    $player.id = 'player' + i;
+    $container.appendChild($player);
+  }
 })();
 
 const lotery = function() {}

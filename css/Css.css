@@ -208,7 +208,7 @@ h1{
   background-color: red;
 }
 
-#player1 {
+#player0 {
   margin-left: 20px;
   margin-top: 10px;
   position: absolute;
@@ -218,11 +218,92 @@ h1{
   height: 60px;
   z-index: 1000;
   background: url('../img/motor.png') no-repeat;
-  background-size: 60px 60px;
+  background-size: 40px 40px;
   -webkit-transition: all 10s easy-out;
   transition: all 0.2s linear;
 
 }
+
+#player1 {
+  margin-left: 20px;
+  margin-top: 40px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background: url('../img/motor.png') no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+
+}
+
+#player2 {
+  margin-left: 20px;
+  margin-top: 70px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background: url('../img/motor.png') no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+
+}
+
+#player3 {
+  margin-left: 70px;
+  margin-top: 10px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background: url('../img/motor.png') no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+
+}
+
+#player4 {
+  margin-left: 70px;
+  margin-top: 40px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background: url('../img/motor.png') no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+
+}
+
+#player5 {
+  margin-left: 70px;
+  margin-top: 70px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background: url('../img/motor.png') no-repeat;
+  background-size: 40px 40px;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+
+}
+
 
 
 .button_player{
