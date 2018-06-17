@@ -2,7 +2,6 @@ body {
   background-image: url(/assets/images/tweed.png);
   margin: 0;
   font-family: Arial;
-
 }
 
 h1{
@@ -13,6 +12,14 @@ h1{
   text-shadow: 0 0 0.2em #d7f, 0 0 0.2em #d7f;
 }
 
+
+#Many{
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    color: #ffffff;
+    background-color: #ffffff05;
+}
 
 .container {
   background-image: url(/assets/images/plansza.png);

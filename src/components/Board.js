@@ -2,6 +2,7 @@ import React from 'react';
 import Players from './board/Players';
 import {GameState} from './state/GameState';
 import Dices from './board/Dices';
+import Money from './board/Money';
 import EventStream from 'eventing-bus/lib/event_stream';
 
 class Board extends React.Component {
@@ -77,6 +78,7 @@ class Board extends React.Component {
 
           <div className="centrum-box">
             <div className="logo">
+              <Money gameState={this.gameState} />
               <Dices gameState={this.gameState} />
             </div>
           </div>
