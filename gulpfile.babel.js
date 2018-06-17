@@ -28,7 +28,7 @@ const Paths = {
   OUT:      'dist',
   JS_SRC:   'src/**/*.js',
   JS_ENTRY: 'src/app.js',
-  HTML_SRC: 'src/index.html',
+  HTML_SRC: 'src/**/*.html',
   SASS_SRC: 'src/scss/**/*.scss',
   SASS_OUT: 'dist/assets/css',
   IMG_SRC:  'src/assets/images/*.*',
@@ -166,7 +166,7 @@ gulp.task('browserSync:init', () => {
     browserSync.init({
       server: Paths.OUT,
       logFileChanges: false
-    });    
+    });
   }
 });
 
@@ -174,7 +174,7 @@ gulp.task('browserSync:init', () => {
 gulp.task('bundle', ['create:svgSprite', 'sass', 'build:js'], () => {
   if (Flags.WATCH) {
     gulp.watch(Paths.SVG_SRC, ['create:svgSprite']);
-    gulp.watch(Paths.SASS_SRC, ['sass']);    
+    gulp.watch(Paths.SASS_SRC, ['sass']);
   }
 });
 
