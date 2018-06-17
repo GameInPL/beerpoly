@@ -12,7 +12,7 @@ class Home extends React.Component {
   }
 
   continueGame() {
-    this.props.history.push('/board');
+    this.props.history.push('/board/');
   }
 
   render() {

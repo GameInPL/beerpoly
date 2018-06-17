@@ -12,7 +12,7 @@ export default () => (
   <Router>
     <div className="container" id="container">
       <Route exact path="/" component={Home} />
-      <Route path="/board" component={Board} />
+      <Route path="/board/" component={Board} />
     </div>
   </Router>
 );
