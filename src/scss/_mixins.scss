@@ -1,0 +1,4 @@
+@mixin hoverButton() {
+  background-color: $button-hover-color;
+  box-shadow: -5px -5px 4px 10px $button-hover-color;
+}

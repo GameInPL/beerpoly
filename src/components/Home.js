@@ -20,11 +20,11 @@ class Home extends React.Component {
       <div className="home">
         <h1>Liczba Graczy:</h1>
         <ul>
-          <li onClick={this.newGame.bind(this, 2)}>Nowa gra dla 2 graczy</li>
-          <li onClick={this.newGame.bind(this, 3)}>Nowa gra dla 3 graczy</li>
-          <li onClick={this.newGame.bind(this, 4)}>Nowa gra dla 4 graczy</li>
-          <li onClick={this.newGame.bind(this, 5)}>Nowa gra dla 5 graczy</li>
-          <li onClick={this.newGame.bind(this, 6)}>Nowa gra dla 6 graczy</li>
+          <li onClick={this.newGame.bind(this, 2)} className='button_player'>2</li>
+          <li onClick={this.newGame.bind(this, 3)} className='button_player'>3</li>
+          <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
+          <li onClick={this.newGame.bind(this, 5)} className='button_player'>5</li>
+          <li onClick={this.newGame.bind(this, 6)} className='button_player'>6</li>
           <li onClick={this.continueGame.bind(this)}>Wracam do ostatniej gry</li>
         </ul>
       </div>

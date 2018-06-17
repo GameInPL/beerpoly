@@ -9,20 +9,15 @@
   }
 
   .card-big {
-    background-color: #0000ff;
     width: 140px;
     height: 140px;
     float: left;
     filter: brightness(70%);
     box-sizing: border-box;
-    border: 2px solid black;
-    border-right: 2px solid;
-    border-left: 2px solid;
   }
 
   .card-big:hover {
-    filter: brightness(100%);
-    border: 1px solid red;
+    @include hoverButton();
   }
 
   .card-big.top {
@@ -42,7 +37,6 @@
   }
 
   .card-top {
-    background-color: #ff99ff;
     width: 80px;
     height: 140px;
     float: left;
@@ -50,15 +44,11 @@
     filter: brightness(70%);
     transition: all .2s ease-in-out;
     box-sizing: border-box;
-    border: 1px solid black;
-    border-right: 1px solid;
-    border-left: 1px solid;
     position: relative;
   }
 
   .card-top:hover {
-    filter: brightness(100%);
-    border: 1px solid red;
+    @include hoverButton();
   }
 
   .card-top .label {
@@ -77,22 +67,17 @@
 
   .card-left {
     clear: both;
-    background-color: #717314;
     width: 140px;
     height: 80px;
     cursor: pointer;
     filter: brightness(70%);
     transition: all .2s ease-in-out;
     box-sizing: border-box;
-    border: 1px solid black;
-    border-right: 1px solid;
-    border-left: 1px solid;
     position: relative;
   }
 
   .card-left:hover {
-    filter: brightness(100%);
-    border: 1px solid red;
+    @include hoverButton();
   }
 
   .card-left .label {
@@ -107,7 +92,6 @@
   }
 
   .logo {
-    background-color: gray;
     width: 720px;
     height: 720px;
     float: left;
@@ -121,22 +105,17 @@
 
   .card-right {
     clear: both;
-    background-color: #490969;
     width: 140px;
     height: 80px;
     cursor: pointer;
     filter: brightness(70%);
     transition: all .2s ease-in-out;
     box-sizing: border-box;
-    border: 1px solid black;
-    border-right: 1px solid;
-    border-left: 1px solid;
     position: relative;
   }
 
   .card-right:hover {
-    filter: brightness(100%);
-    border: 1px solid red;
+    @include hoverButton();
   }
 
   .card-right .label {
@@ -162,22 +141,17 @@
 
   .card-bottom {
     float: left;
-    background-color: #33ff33;
     width: 80px;
     height: 140px;
     cursor: pointer;
     filter: brightness(70%);
     transition: all .2s ease-in-out;
     box-sizing: border-box;
-    border: 1px solid black;
-    border-right: 1px solid;
-    border-left: 1px solid;
     position: relative;
   }
 
   .card-bottom:hover {
-    filter: brightness(100%);
-    border: 1px solid red;
+    @include hoverButton();
   }
 
   .card-bottom .label {

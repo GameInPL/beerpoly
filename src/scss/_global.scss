@@ -1,5 +1,5 @@
 body {
-  background-image: url(../img/tweed.png);
+  background-image: url(/assets/images/tweed.png);
   margin: 0;
   font-family: Arial;
 
@@ -15,16 +15,13 @@ h1{
 
 
 .container {
+  background-image: url(/assets/images/plansza.png);
   background-color: black;
   width: 1000px;
   height: 1000px;
   margin: auto;
   position: relative;
 }
-
-
-
-
 
 .button_player{
   display: block;
