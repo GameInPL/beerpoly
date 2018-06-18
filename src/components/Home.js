@@ -8,7 +8,7 @@ class Home extends React.Component {
     let gameState = new GameState();
     gameState.reset(playersNumber);
     gameState.save();
-    this.props.history.push('/board');
+    this.props.history.push('/board/');
   }
 
   continueGame() {

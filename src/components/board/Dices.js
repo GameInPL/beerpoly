@@ -5,6 +5,7 @@ class Dices extends React.Component {
   constructor(props) {
     super(props);
     this.gameState = props.gameState;
+    this.eventBus = props.gameState.eventBus;
     this.state = {
       dices: this.gameState.state.dices
     }
@@ -12,8 +13,6 @@ class Dices extends React.Component {
 
   randomRoll() {
     return Math.floor(Math.random() * 6 + 1);
-    //this.state.dices.push(value);
-    //return value;
   }
 
   rollOfDices() {
@@ -31,9 +30,11 @@ class Dices extends React.Component {
       // TODO: ...
       console.log('wylosowano', value);
       console.log('movePlayer getCurrentPlayer', value);
-      this.gameState.moveCurrentPlayer(value);
-      this.gameState.nextTour();
+      //this.gameState.moveCurrentPlayer(value);
+      //this.gameState.nextTour();
       //movePlayer(getCurrentPlayer(), value);
+      this.eventBus.publish('doMoveCurrentPlayer', value);
+      this.eventBus.publish('doNextTour');
     }
     //roundNumber++;
   }
@@ -54,9 +55,11 @@ class Dices extends React.Component {
       // TODO: ...
       console.log('wylosowano', value);
       console.log('movePlayer getCurrentPlayer', value);
-      this.gameState.moveCurrentPlayer(value);
-      this.gameState.nextTour();
+      //this.gameState.moveCurrentPlayer(value);
+      //this.gameState.nextTour();
       //movePlayer(getCurrentPlayer(), value);
+      this.eventBus.publish('doMoveCurrentPlayer', value);
+      this.eventBus.publish('doNextTour');
     }
   }
 
