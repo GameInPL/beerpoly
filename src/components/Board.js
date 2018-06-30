@@ -1,6 +1,7 @@
 import React from 'react';
 import Players from './board/Players';
 import {GameState} from './state/GameState';
+import {GameLogic} from './state/GameLogic';
 import Dices from './board/Dices';
 import Money from './board/Money';
 import EventStream from 'eventing-bus/lib/event_stream';
@@ -10,6 +11,8 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     let gameState = new GameState();
+    let gameLogic = new GameLogic(gameState);
+    gameLogic.init();
     gameState.load();
     this.gameState = gameState;
   }
