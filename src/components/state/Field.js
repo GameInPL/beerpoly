@@ -1,6 +1,6 @@
 
-export class Filed  {
 //pole
+export class Field  {
   constructor(idNumber, name) {
     this.idNumber = idNumber;
     this.name = name;
@@ -17,13 +17,11 @@ export class Filed  {
 }
 
 
+//koszt stopnia inwestycji
 export class FiledInvestCost {
-//wycena wartosci pola
   constructor(idNumber) {
-    this.money = money;
-    this.Pay = 0; //ile gracz musi zpalci graczu ,licitacja
     this.idNumber = idNumber;
-
+    this.money = 0;
+    this.Pay = 0; //ile gracz musi zpalci graczu ,licitacja
   }
-
 }

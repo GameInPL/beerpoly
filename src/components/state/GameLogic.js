@@ -11,6 +11,8 @@ export class GameLogic  {
   init(){
     this.eventBus.on('doMoveCurrentPlayer', this.moveCurrentPlayer.bind(this));
     this.eventBus.on('doNextTour', this.nextTour.bind(this));
+    // inside logic
+    this.eventBus.on('afterMoveCurrentPlayer', this.playerStop.bind(this));
   }
 
   moveCurrentPlayer(steps) {
@@ -28,6 +30,10 @@ export class GameLogic  {
     this.gameState.state.tour++;
     this.eventBus.publish('afterNextTour', this.state);
     this.gameState.save();
+  }
+
+  playerStop(){
+    alert('hura');
   }
 
 }
