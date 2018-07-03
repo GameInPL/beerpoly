@@ -119,7 +119,7 @@ class Board extends React.Component {
         <div className="bottom-box">
           <div className="card-big bottom left" id="p30">Uniwersytet Ekonomiczny </div>
           <div className="card-bottom" id="p29">
-            <div className="label">31 baza lotnicza</div>
+            <div className="label">Baza lotnicza</div>
           </div>
           <div className="card-bottom" id="p28">
             <div className="label">Malta</div>
