@@ -1,9 +1,11 @@
 import React from 'react';
-import Players from './board/Players';
 import {GameState} from './state/GameState';
 import {GameLogic} from './state/GameLogic';
+import Players from './board/Players';
 import Dices from './board/Dices';
 import Money from './board/Money';
+import Cards from './board/Cards';
+import Popups from './Popups';
 import EventStream from 'eventing-bus/lib/event_stream';
 
 class Board extends React.Component {
@@ -83,6 +85,7 @@ class Board extends React.Component {
             <div className="logo">
               <Money gameState={this.gameState} />
               <Dices gameState={this.gameState} />
+              <Cards gameState={this.gameState} />
             </div>
           </div>
 
@@ -141,6 +144,7 @@ class Board extends React.Component {
           <div className="card-big bottom right" id="p20">Idziesz do izby wytrzeźwień</div>
         </div>
         <div className="clear"></div>
+        <Popups gameState={this.gameState} />
       </div>
     )
   }
