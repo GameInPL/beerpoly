@@ -14,13 +14,16 @@ export class GameState  {
   }
 
   save() {
-    localStorage.setItem('state', JSON.stringify(this.state));
+    let persistState = this.state.getPersistState();
+    localStorage.setItem('state', JSON.stringify(persistState));
     this.eventBus.publish('afterSave', this.state);
   }
 
   load() {
     let json = localStorage.getItem('state');
-    this.state = JSON.parse(json);
+    let persistState = JSON.parse(json);
+    this.state = new DumpState();
+    this.state.initPersistState(persistState);
     this.eventBus.publish('afterLoad', this.state);
   }
 

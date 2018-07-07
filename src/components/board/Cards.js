@@ -6,12 +6,12 @@ class Cards extends React.Component {
     super(props);
     this.gameState = props.gameState;
     this.state = {
-      chances: this.gameState.state.chances
+      chances: this.gameState.state.chances,
+      challenges: this.gameState.state.challenges
     }
   }
 
   chanceButton() {
-    // get random card
     let randomCard = this.state.chances[Math.floor(Math.random()*this.state.chances.length)];
     this.gameState.eventBus.publish('doOpenPopup', {
       type: 'chance',
@@ -20,7 +20,11 @@ class Cards extends React.Component {
   }
 
   challengeButton() {
-    //TODO: @INU Do it ;-)
+    let randomCard = this.state.challenges[Math.floor(Math.random()*this.state.challenges.length)];
+    this.gameState.eventBus.publish('doOpenPopup', {
+      type: 'challenge',
+      state: randomCard,
+    })
   }
 
   render() {

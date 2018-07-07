@@ -1,5 +1,6 @@
 import React from 'react';
 import ChancePopup from './popups/ChancePopup';
+import ChallengePopup from './popups/ChallengePopup';
 
 class Popups extends React.Component {
 
@@ -31,6 +32,14 @@ class Popups extends React.Component {
             <div key={i} className="popup">
             {this.renderClose(popup, this.closePopup.bind(this, i))}
             <ChancePopup gameState={this.gameState} popup={popup} />
+            </div>
+          );
+          break;
+        case 'challenge':
+          popups.push(
+            <div key={i} className="popup">
+            {this.renderClose(popup, this.closePopup.bind(this, i))}
+            <ChallengePopup gameState={this.gameState} popup={popup} />
             </div>
           );
           break;
