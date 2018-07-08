@@ -14,10 +14,10 @@ export class DumpState  {
     this.popups = [];
   }
 
-  init() {
+  init(playerNumber) {
     this.initPlayers(playerNumber);
     this.initFields();
-    this.initChances()
+    this.initChances();
     this.initChallenges();
   }
 

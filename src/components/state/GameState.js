@@ -4,12 +4,13 @@ import {DumpState} from './DumpState';
 export class GameState  {
 
   constructor() {
-    this.state = new DumpState(0);
+    this.state = null;
     this.eventBus = new EventStream();
   }
 
   reset(playerNumber) {
     this.state = new DumpState(playerNumber);
+    this.state.init(playerNumber);
     this.eventBus.publish('afterReset', this.state);
   }
 
