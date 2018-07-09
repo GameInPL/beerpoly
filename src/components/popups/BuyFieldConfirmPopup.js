@@ -12,8 +12,10 @@ class  BuyFieldConfirmPopup extends React.Component {
         <p>
           <b>Czy chesz kupic pole {this.props.popup.state.field.name}?</b>
         </p>
-        <p onClick={this.buyButton.bind(this)}>Kup</p>
-        <p onClick={this.cancelButton.bind(this)}>Olej</p>
+        <div className="buttons">
+          <div className="btn" onClick={this.buyButton.bind(this)}>Kup</div>
+          <div className="btn" onClick={this.cancelButton.bind(this)}>Olej</div>
+        </div>
       </div>
     )
   }
