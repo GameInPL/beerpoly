@@ -30,8 +30,8 @@ class Cards extends React.Component {
   render() {
     return (
       <div className="cards">
-        <div className="card chance" onClick={this.chanceButton.bind(this)} >Karty szansy</div>
-        <div className="card challenge" onClick={this.challengeButton.bind(this)} >Karty wyzwania</div>
+        <div className="card_chance" onClick={this.chanceButton.bind(this)} >Karty szansy</div>
+        <div className="card_challenge" onClick={this.challengeButton.bind(this)} >Karty wyzwania</div>
       </div>
     )
   }

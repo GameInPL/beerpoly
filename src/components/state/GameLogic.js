@@ -51,7 +51,12 @@ export class GameLogic  {
 
   playerStop(currentPlayer){
     let field = this.getPlayerField(currentPlayer.position);
-    confirm('Czy chcesz kupić '+field.name);
+    this.gameState.eventBus.publish('doOpenPopup', {
+      type: 'buyFieldConfirm',
+      state: {
+        field: field
+      }
+    })
   }
 
   getPlayerField(idNumber){
