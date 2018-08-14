@@ -25,7 +25,7 @@ class Home extends React.Component {
           <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
           <li onClick={this.newGame.bind(this, 5)} className='button_player'>5</li>
           <li onClick={this.newGame.bind(this, 6)} className='button_player'>6</li>
-          <li onClick={this.continueGame.bind(this)}>Wracam do ostatniej gry</li>
+          <li onClick={this.continueGame.bind(this)} className="load"> Wracam do ostatniej gry</li>
         </ul>
       </div>
     )

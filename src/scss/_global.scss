@@ -30,24 +30,6 @@ h1{
   position: relative;
 }
 
-.button_player{
-  display: block;
-  margin: 30px ;
-  background-color: #fff;
-  border: 3px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  transition: .3s;
-  float: left;
-}
-
-.button_player:hover {
-  background-color: #000;
-  color: white;
-  border: 3px solid white;
-}
-
-
 button {
   display: block;
   margin: 5px auto;

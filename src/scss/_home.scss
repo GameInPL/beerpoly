@@ -1,7 +1,35 @@
-/*.home {
+.home {
+  text-align: center;
+
+  ul {
+    display: inline-block;
+  }
+
   ul li {
-    color: black;
     cursor: pointer;
   }
 }
-*/
+
+.load {
+  color: #ffffff;
+  list-style: none;
+
+}
+
+.button_player {
+  text-align: center;
+  display: block;
+  margin: 30px;
+  background-color: #fff;
+  border: 3px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: 0.3s;
+  float: left;
+}
+
+.button_player:hover {
+  background-color: #000;
+  color: white;
+  border: 3px solid white;
+}
