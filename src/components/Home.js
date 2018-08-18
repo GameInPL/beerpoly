@@ -18,8 +18,8 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Liczba Graczy:</h1>
         <ul>
+          <h1>Liczba Graczy:</h1>
           <li onClick={this.newGame.bind(this, 2)} className='button_player'>2</li>
           <li onClick={this.newGame.bind(this, 3)} className='button_player'>3</li>
           <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
