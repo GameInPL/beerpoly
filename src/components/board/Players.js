@@ -28,7 +28,7 @@ class Players extends React.Component {
   movePlayerTo(playerElement, fieldNumber) {
     var destElement = document.getElementById('p'+fieldNumber);
     var destRect = destElement.getBoundingClientRect();
-    var containerElement = document.getElementById('container');
+    var containerElement = document.getElementById('board');
     var containerRect = containerElement.getBoundingClientRect();
     playerElement.style.top = (destRect.top - containerRect.top) + 'px';
     playerElement.style.left = (destRect.left - containerRect.left) + 'px';
