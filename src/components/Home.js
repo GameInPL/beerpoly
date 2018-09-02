@@ -25,17 +25,17 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="home-menu-list">
+            <h1>Wracam do gry:</h1>
+            <ul>
+              <li onClick={this.continueGame.bind(this)} className="button_player">Ostatnia gra</li>
+            </ul>
             <h1>Nowa gra:</h1>
             <ul>
-              <li onClick={this.continueGame.bind(this)} className="button_player">Wracam do gry</li>
-            </ul>
-            <h1>Liczba Graczy:</h1>
-            <ul>
-              <li onClick={this.newGame.bind(this, 2)} className='button_player'>2</li>
-              <li onClick={this.newGame.bind(this, 3)} className='button_player'>3</li>
-              <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
-              <li onClick={this.newGame.bind(this, 5)} className='button_player'>5</li>
-              <li onClick={this.newGame.bind(this, 6)} className='button_player'>6</li>
+              <li onClick={this.newGame.bind(this, 2)} className='button_player'>2 Graczy</li>
+              <li onClick={this.newGame.bind(this, 3)} className='button_player'>3 Graczy</li>
+              <li onClick={this.newGame.bind(this, 4)} className='button_player'>4 Graczy</li>
+              <li onClick={this.newGame.bind(this, 5)} className='button_player'>5 Graczy</li>
+              <li onClick={this.newGame.bind(this, 6)} className='button_player'>6 Graczy</li>
             </ul>
           </div>
         </div>
