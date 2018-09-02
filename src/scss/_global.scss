@@ -1,15 +1,12 @@
+html,
 body {
-  background-image: url(/assets/images/tweed.png);
   margin: 0;
+  padding: 0;
   font-family: Arial;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
-
-h1{
-  color: white;
-  text-align: center;
-  text-shadow: 0 0 0.2em #d7f, 0 0 0.2em #d7f;
-}
-
 
 #Many{
     padding: 20px;

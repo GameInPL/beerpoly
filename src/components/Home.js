@@ -18,15 +18,27 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <ul>
-          <h1>Liczba Graczy:</h1>
-          <li onClick={this.newGame.bind(this, 2)} className='button_player'>2</li>
-          <li onClick={this.newGame.bind(this, 3)} className='button_player'>3</li>
-          <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
-          <li onClick={this.newGame.bind(this, 5)} className='button_player'>5</li>
-          <li onClick={this.newGame.bind(this, 6)} className='button_player'>6</li>
-          <li onClick={this.continueGame.bind(this)} className="load"> Wracam do ostatniej gry</li>
-        </ul>
+
+        <div className="home-menu">
+          <div className="home-blure-wrap">
+            <div className="home-blure-bg">
+            </div>
+          </div>
+          <div className="home-menu-list">
+            <h1>Nowa gra:</h1>
+            <ul>
+              <li onClick={this.continueGame.bind(this)} className="button_player">Wracam do gry</li>
+            </ul>
+            <h1>Liczba Graczy:</h1>
+            <ul>
+              <li onClick={this.newGame.bind(this, 2)} className='button_player'>2</li>
+              <li onClick={this.newGame.bind(this, 3)} className='button_player'>3</li>
+              <li onClick={this.newGame.bind(this, 4)} className='button_player'>4</li>
+              <li onClick={this.newGame.bind(this, 5)} className='button_player'>5</li>
+              <li onClick={this.newGame.bind(this, 6)} className='button_player'>6</li>
+            </ul>
+          </div>
+        </div>
       </div>
     )
   }
