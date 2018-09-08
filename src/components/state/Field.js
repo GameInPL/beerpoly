@@ -6,6 +6,7 @@ export class Field  {
     this.name = name;
     this.investLvl = 0; //ilosc possadanych budyów
     this.cost=0;
+    this.owner=null; // do kogo nalezy budynek
     this.filedInvestCosts = [
       new FiledInvestCost(),
       new FiledInvestCost(),
