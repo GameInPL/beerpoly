@@ -4,10 +4,14 @@ import {GameState} from './state/GameState';
 
 class Home extends React.Component {
 
+  constructor() {
+    super();
+    this.gameState = new GameState();
+  }
+
   newGame(playersNumber) {
-    let gameState = new GameState();
-    gameState.reset(playersNumber);
-    gameState.save();
+    this.gameState.reset(playersNumber);
+    this.gameState.save();
     this.props.history.push('/board/');
   }
 
@@ -18,17 +22,13 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-
         <div className="home-menu">
           <div className="home-blure-wrap">
             <div className="home-blure-bg">
             </div>
           </div>
           <div className="home-menu-list">
-            <h1>Wracam do gry:</h1>
-            <ul>
-              <li onClick={this.continueGame.bind(this)} className="button_player">Ostatnia gra</li>
-            </ul>
+            { this.gameState.hasPersistGame() ? this.renderContinue() : '' }
             <h1>Nowa gra:</h1>
             <ul>
               <li onClick={this.newGame.bind(this, 2)} className='button_player'>2 Graczy</li>
@@ -42,6 +42,18 @@ class Home extends React.Component {
       </div>
     )
   }
+
+  renderContinue() {
+    return (
+      <div className="continue">
+        <h1>Wracam do gry:</h1>
+        <ul>
+          <li onClick={this.continueGame.bind(this)} className="button_player">Ostatnia gra</li>
+        </ul>
+      </div>
+    )
+  }
+
 }
 
 export default Home;
