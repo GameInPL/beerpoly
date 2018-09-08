@@ -20,6 +20,10 @@ export class GameState  {
     this.eventBus.publish('afterSave', this.state);
   }
 
+  hasPersistGame() {
+    return localStorage.getItem('state') !== null;
+  }
+
   load() {
     let json = localStorage.getItem('state');
     let persistState = JSON.parse(json);
