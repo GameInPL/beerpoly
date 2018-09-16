@@ -21,6 +21,7 @@ export class GameLogic  {
     this.eventBus.publish('beforeCurrentMovePlayer', currentPlayer);
     this.eventBus.publish('beforeMovePlayer', currentPlayer);
     currentPlayer.position += steps;
+    currentPlayer.position = currentPlayer.position % this.gameState.state.fields.length;
     this.eventBus.publish('afterMoveCurrentPlayer', currentPlayer);
     this.eventBus.publish('afterMovePlayer', currentPlayer);
     this.gameState.save();

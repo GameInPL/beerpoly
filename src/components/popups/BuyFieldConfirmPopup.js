@@ -1,6 +1,6 @@
 import React from 'react';
 
-class  BuyFieldConfirmPopup extends React.Component {
+class BuyFieldConfirmPopup extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,10 +21,14 @@ class  BuyFieldConfirmPopup extends React.Component {
   }
 
   buyButton() {
-    let eventBus = this.props.gameState.eventBus;
+    let gameState = this.props.gameState;
+    let eventBus = gameState.eventBus;
     let popup = this.props.popup;
-    //  eventBus.publish(popup.state.triggerEvent, popup);
-     eventBus.publish('doClosePopup', popup);
+    let currentPlayer = gameState.getCurrentPlayer();
+    let currentPlayerField = gameState.state.fields[currentPlayer.position];
+    currentPlayerField.owner = currentPlayer.idNumber;
+    gameState.save();
+    eventBus.publish('doClosePopup', popup);
   }
 
   cancelButton() {
