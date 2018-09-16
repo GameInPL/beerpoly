@@ -17,6 +17,11 @@ class Board extends React.Component {
     gameLogic.init();
     gameState.load();
     this.gameState = gameState;
+    gameState.eventBus.on('afterSave', this.afterGameStateUpdate.bind(this));
+  }
+
+  afterGameStateUpdate() {
+    this.forceUpdate();
   }
 
   render() {
