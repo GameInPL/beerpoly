@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Game} from '../Game/Game';
+import {Game} from '../game/Game';
 
 class Home extends React.Component {
 

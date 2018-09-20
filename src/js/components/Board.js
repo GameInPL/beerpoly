@@ -1,5 +1,5 @@
 import React from 'react';
-import {Game} from '../game/game';
+import {Game} from '../game/Game';
 import Players from './board/Players';
 import Dices from './board/Dices';
 import Money from './board/Money';
