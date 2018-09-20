@@ -7,17 +7,14 @@ class Popups extends React.Component {
 
   constructor(props) {
     super(props);
-    this.gameState = props.gameState;
-    this.gameState.eventBus.on('changedPopups', this.updateState.bind(this))
-    this.state = {
-      popups: props.gameState.state.popups
-    }
+    this.game = props.game;
+    this.state = this.game.state.dump();
+    this.game.eventBus.on('commit', this.commit.bind(this));
   }
 
-  updateState() {
-    this.setState({
-      popups: this.gameState.state.popups
-    });
+  commit(state) {
+    this.state = state;
+    this.forceUpdate()
   }
 
   render() {
@@ -32,7 +29,7 @@ class Popups extends React.Component {
           popups.push(
             <div key={i} className="popup">
             {this.renderClose(popup, this.closePopup.bind(this, i))}
-            <ChancePopup gameState={this.gameState} popup={popup} />
+            <ChancePopup game={this.game} popup={popup} />
             </div>
           );
           break;
@@ -40,15 +37,14 @@ class Popups extends React.Component {
           popups.push(
             <div key={i} className="popup">
             {this.renderClose(popup, this.closePopup.bind(this, i))}
-            <ChallengePopup gameState={this.gameState} popup={popup} />
+            <ChallengePopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'buyFieldConfirm':
           popups.push(
             <div key={i} className="popup">
-            {this.renderClose(popup, this.closePopup.bind(this, i))}
-            <BuyFieldConfirmPopup gameState={this.gameState} popup={popup} />
+            <BuyFieldConfirmPopup game={this.game} popup={popup} />
             </div>
           );
           break;
@@ -65,9 +61,10 @@ class Popups extends React.Component {
   }
 
   closePopup(index) {
-    let closedPopups, popups;
-    closedPopups = this.state.popups[index];
-    this.gameState.eventBus.publish('doClosePopup', closedPopups);
+    let popup = this.state.popups[index];
+    return this.game.closePopup(popup).then(() => {
+      return this.game.commit();
+    });
   }
 
   renderClose(popup, onCloseBtn) {

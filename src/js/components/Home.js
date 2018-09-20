@@ -1,17 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {GameState} from './state/GameState';
+import {Game} from '../Game/Game';
 
 class Home extends React.Component {
 
   constructor() {
     super();
-    this.gameState = new GameState();
+    this.game = new Game();
   }
 
   newGame(playersNumber) {
-    this.gameState.reset(playersNumber);
-    this.gameState.save();
+    this.game.state.init(playersNumber);
+    this.game.state.save();
     this.props.history.push('/board/');
   }
 
@@ -28,7 +28,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="home-menu-list">
-            { this.gameState.hasPersistGame() ? this.renderContinue() : '' }
+            { this.game.state.hasPersistGame() ? this.renderContinue() : '' }
             <h1>Nowa gra:</h1>
             <ul>
               <li onClick={this.newGame.bind(this, 2)} className='button_player'>2 Graczy</li>

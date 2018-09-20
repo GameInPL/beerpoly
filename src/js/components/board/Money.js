@@ -4,10 +4,14 @@ class Money extends React.Component {
 
   constructor(props) {
     super(props);
-    this.gameState = props.gameState;
-    this.state = {
-      players: this.gameState.state.players
-    }
+    this.game = props.game;
+    this.state = this.game.state.dump();
+    this.game.eventBus.on('commit', this.commit.bind(this));
+  }
+
+  commit(state) {
+    this.state = state;
+    this.forceUpdate()
   }
 
   render() {

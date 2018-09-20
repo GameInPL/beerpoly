@@ -2,9 +2,22 @@ import {Player} from './Player';
 import {Chance} from './Chance';
 import {Challenge} from './Challenge';
 import {Field} from './Field';
+
 export class DumpState  {
 
   constructor(playerNumber) {
+    this.initData();
+  }
+
+  init(playerNumber) {
+    this.initData();
+    this.initPlayers(playerNumber);
+    this.initFields();
+    this.initChances();
+    this.initChallenges();
+  }
+
+  initData(playerNumber) {
     this.tour = 0;
     this.dices = [];
     this.players = [];
@@ -12,13 +25,6 @@ export class DumpState  {
     this.chances = [];
     this.challenges = [];
     this.popups = [];
-  }
-
-  init(playerNumber) {
-    this.initPlayers(playerNumber);
-    this.initFields();
-    this.initChances();
-    this.initChallenges();
   }
 
   initPlayers(playerNumber) {
@@ -96,22 +102,16 @@ export class DumpState  {
     this.fields.push(new Field(39, "Stare Zoo"));
   }
 
-  getPersistState() {
-    return {
+  dump() {
+    return JSON.parse(JSON.stringify({
       tour: this.tour,
       dices: this.dices,
+      fields: this.fields,
       players: this.players,
+      chances: this.chances,
+      challenges: this.challenges,
       popups: this.popups
-    }
+    }));
   }
 
-  initPersistState(state) {
-    this.tour = state.tour;
-    this.dices = state.dices;
-    this.players = state.players;
-    this.popups = state.popups;
-    this.initFields();
-    this.initChances()
-    this.initChallenges();
-  }
 }

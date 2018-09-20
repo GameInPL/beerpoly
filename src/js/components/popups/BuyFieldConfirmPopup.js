@@ -4,6 +4,9 @@ class BuyFieldConfirmPopup extends React.Component {
 
   constructor(props) {
     super(props);
+    this.game = props.game;
+    this.popup = props.popup;
+    this.eventBus = props.game.eventBus;
   }
 
   render() {
@@ -21,23 +24,26 @@ class BuyFieldConfirmPopup extends React.Component {
   }
 
   buyButton() {
-    let gameState = this.props.gameState;
-    let eventBus = gameState.eventBus;
-    let popup = this.props.popup;
-    let currentPlayer = gameState.getCurrentPlayer();
-    let currentPlayerField = gameState.state.fields[currentPlayer.position];
+    let currentPlayer = this.game.getCurrentPlayer();
+    let currentPlayerField = this.game.state.fields[currentPlayer.position];
     currentPlayerField.owner = currentPlayer.idNumber;
-    gameState.save();
-    eventBus.publish('doClosePopup', popup);
+    return this.game.nextTour().then(() => {
+      return this.game.closePopup(this.popup);
+    }).then(() => {
+      return this.game.commit();
+    }).then(() => {
+      return this.game.state.save();
+    });
   }
 
   cancelButton() {
-    let eventBus = this.props.gameState.eventBus;
-    let popup = this.props.popup;
-    eventBus.publish('doClosePopup', popup);
+    return this.game.closePopup(this.popup).then(() => {
+      return this.game.commit();
+    }).then(() => {
+      return this.game.state.save();
+    });
   }
-
 
 };
 
-export default  BuyFieldConfirmPopup;
+export default BuyFieldConfirmPopup;

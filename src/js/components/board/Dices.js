@@ -4,10 +4,10 @@ class Dices extends React.Component {
 
   constructor(props) {
     super(props);
-    this.gameState = props.gameState;
-    this.eventBus = props.gameState.eventBus;
+    this.game = props.game;
+    this.eventBus = props.game.eventBus;
     this.state = {
-      dices: this.gameState.state.dices
+      dices: this.game.state.dices
     }
   }
 
@@ -29,12 +29,7 @@ class Dices extends React.Component {
       // idziemy value pól do przozdu
       // TODO: ...
       console.log('wylosowano', value);
-      console.log('movePlayer getCurrentPlayer', value);
-      //this.gameState.moveCurrentPlayer(value);
-      //this.gameState.nextTour();
-      //movePlayer(getCurrentPlayer(), value);
-      this.eventBus.publish('doMoveCurrentPlayer', value);
-      this.eventBus.publish('doNextTour');
+      return this.move(value);
     }
     //roundNumber++;
   }
@@ -54,13 +49,16 @@ class Dices extends React.Component {
       // idziemy value pól do przozdu
       // TODO: ...
       console.log('wylosowano', value);
-      console.log('movePlayer getCurrentPlayer', value);
-      //this.gameState.moveCurrentPlayer(value);
-      //this.gameState.nextTour();
-      //movePlayer(getCurrentPlayer(), value);
-      this.eventBus.publish('doMoveCurrentPlayer', value);
-      this.eventBus.publish('doNextTour');
+      return this.move(value);
     }
+  }
+
+  move(value) {
+    return this.game.moveCurrentPlayer(value).then(() => {
+      return this.game.commit();
+    }).then(() => {
+      return this.game.state.save();
+    });
   }
 
   render() {

@@ -4,20 +4,39 @@ class Players extends React.Component {
 
   constructor(props) {
     super(props);
-    this.gameState = props.gameState;
-    this.state = {
-      players: this.gameState.state.players
-    }
-    this.gameState.eventBus.on('afterMovePlayer', this.movePlayer.bind(this))
+    this.game = props.game;
+    this.state = this.game.state.dump();
+    this.game.eventBus.on('commit', this.commit.bind(this));
   }
 
-  movePlayer(player) {
-    var playerElement = document.getElementById("player"+player.idNumber);
-    let destFieldNumber = player.position % 40;
+  commit(newState) {
+    let promisses = [];
+    for(let i=0; i<this.state.players.length; i++) {
+      if(this.state.players[i].position != newState.players[i].position) {
+        promisses.push(this.movePlayerSlot(newState.players[i]));
+      }
+    }
+    this.state = {
+      players: newState.players
+    };
+    return Promise.all(promisses);
+  }
+
+  movePlayerSlot(player) {
+    return new Promise((resolve, reject) => this.movePlayer(player, resolve, reject))
+  }
+
+  movePlayer(player, resolve, reject) {
     const time = 200;
+    let playerElement = document.getElementById("player"+player.idNumber);
+    let destFieldNumber = player.position % 40;
     let step = () => {
       var fieldNumber = parseInt(playerElement.getAttribute("fieldNumber")) || 0;
-      if(destFieldNumber == fieldNumber) return;
+      if(destFieldNumber == fieldNumber) {
+        //this.game.eventBus.publish('afterAnimMovePlayer', null);
+        resolve();
+        return;
+      }
       fieldNumber = (parseInt(fieldNumber) + 1) % 40;
       this.movePlayerTo(playerElement, fieldNumber);
       setTimeout(step, time);
@@ -37,7 +56,7 @@ class Players extends React.Component {
 
   componentDidMount() {
     for(let i=0; i<this.state.players.length; i++) {
-      this.movePlayer(this.state.players[i]);
+      this.movePlayerSlot(this.state.players[i]);
     }
   }
 
