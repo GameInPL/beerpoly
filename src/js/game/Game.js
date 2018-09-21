@@ -1,3 +1,4 @@
+import {FieldActions} from './FieldActions';
 import {EventBus} from './EventBus';
 import {State} from './state/State';
 
@@ -6,6 +7,9 @@ export class Game  {
   constructor(gameState) {
     this.state = new State();
     this.eventBus = new EventBus();
+    this.actions = {
+      fields: new FieldActions(this)
+    };
   }
 
   commit() {
@@ -13,25 +17,54 @@ export class Game  {
     return this.eventBus.publish('commit', dump);
   }
 
-  moveCurrentPlayer(steps) {
-    let currentPlayer = this.getCurrentPlayer();
-    return this.eventBus.publishAll(['beforeCurrentMovePlayer', 'beforeMovePlayer'], currentPlayer).then(() => {
-      currentPlayer.position += steps;
-      currentPlayer.position = currentPlayer.position % this.state.fields.length;
-      return this.eventBus.publishAll(['afterMoveCurrentPlayer', 'afterMovePlayer'], currentPlayer);
-    }).then(() => {
+  movePlayer(player, steps) {
+    return this.movePlayerTo(player, player.position + steps);
+  }
+
+  movePlayerTo(player, position) {
+    return this.eventBus.publishAll(['beforeMovePlayer'], player).then(() => {
+      player.position = position;
+      player.position = player.position % this.state.fields.length;
+      this.state.players[player.idNumber].position = player.position;
+      return this.eventBus.publishAll(['afterMovePlayer'], player);
+    });
+  }
+
+  playerGoTo(player, position) {
+    return this.movePlayerTo(player, position).then(() => {
       return this.commit();
     }).then(() => {
-      let field = this.state.fields[currentPlayer.position];
-      return this.openPopup({
-        type: 'buyFieldConfirm',
-        state: {
-          field: field
-        }
-      });
+      return this.triggerPlayerField(player);
     }).then(() => {
       return this.commit();
     });
+  }
+
+  playerMoveAbout(player, steps) {
+    let firstPosition = (player.position - steps) % this.state.fields.length;
+    firstPosition = firstPosition < 0 ? this.state.fields.length + firstPosition : firstPosition;
+    let secondPosition = (player.position + steps) % this.state.fields.length;
+    secondPosition = secondPosition < 0 ? this.state.fields.length + secondPosition : secondPosition;
+    return this.openPopup({
+      type: 'switchMovePopup',
+      state: {
+        player: player,
+        steps: steps,
+        fields: [
+          this.state.fields[firstPosition],
+          this.state.fields[secondPosition],
+        ]
+      }
+    });
+  }
+
+  triggerPlayerField(player) {
+    let field = this.state.fields[player.position];
+    return this.eventBus.publish(field.action, {
+      player: player,
+      field: field,
+      state: this.state.dump()
+    })
   }
 
   nextTour() {
@@ -57,6 +90,30 @@ export class Game  {
     }).then(() => {
       return this.eventBus.publishAll(['afterClosePopup', 'changedPopups'], this.state)
     });
+  }
+
+  takeRandomChance() {
+    let randomCard = this.state.chances[Math.floor(Math.random()*this.state.chances.length)];
+    return this.openPopup({
+      type: 'chance',
+      state: randomCard,
+    });
+  }
+
+  takeRandomChallenge() {
+    let randomCard = this.state.challenges[Math.floor(Math.random()*this.state.challenges.length)];
+    return this.openPopup({
+      type: 'challenge',
+      state: randomCard,
+    });
+  }
+
+  lockInterface() {
+    return this.eventBus.publish('lockInterface');
+  }
+
+  unlockInterface() {
+    return this.eventBus.publish('unlockInterface');
   }
 
   getCurrentPlayer() {

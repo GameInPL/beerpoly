@@ -2,6 +2,8 @@ import React from 'react';
 import ChancePopup from './popups/ChancePopup';
 import ChallengePopup from './popups/ChallengePopup';
 import BuyFieldConfirmPopup  from './popups/BuyFieldConfirmPopup';
+import SwitchMovePopup  from './popups/SwitchMovePopup';
+import TakeCardPopup  from './popups/TakeCardPopup';
 
 class Popups extends React.Component {
 
@@ -45,6 +47,20 @@ class Popups extends React.Component {
           popups.push(
             <div key={i} className="popup">
             <BuyFieldConfirmPopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
+        case 'switchMovePopup':
+          popups.push(
+            <div key={i} className="popup">
+            <SwitchMovePopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
+        case 'takeCardPopup':
+          popups.push(
+            <div key={i} className="popup">
+            <TakeCardPopup game={this.game} popup={popup} />
             </div>
           );
           break;

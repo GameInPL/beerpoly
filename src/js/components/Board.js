@@ -16,17 +16,28 @@ class Board extends React.Component {
     super(props);
     this.game = new Game();
     this.game.state.load();
+    this.eventBus = this.game.eventBus;
+    this.eventBus.on('lockInterface', this.lockInterface.bind(this));
+    this.eventBus.onAll(['unlockInterface', 'afterNextTour'], this.unlockInterface.bind(this));
+  }
+
+  lockInterface() {
+    document.body.classList.add('lock-interface');
+  }
+
+  unlockInterface() {
+    document.body.classList.remove('lock-interface');
   }
 
   render() {
     return (
-      <div className="board" id="board">
+      <div className='board' id='board'>
         <Players game={this.game} />
         <TopFields game={this.game} />
-        <div className="center-box">
+        <div className='center-box'>
           <LeftFields game={this.game} />
-          <div className="centrum-box">
-            <div className="logo">
+          <div className='centrum-box'>
+            <div className='logo'>
               <Money game={this.game} />
               <Dices game={this.game} />
               <Cards game={this.game} />
@@ -35,7 +46,7 @@ class Board extends React.Component {
           <RightFields game={this.game} />
         </div>
         <BottomFields game={this.game} />
-        <div className="clear"></div>
+        <div className='clear'></div>
         <Popups game={this.game} />
       </div>
     )

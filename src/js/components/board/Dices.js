@@ -16,48 +16,54 @@ class Dices extends React.Component {
   }
 
   rollOfDices() {
-    let newState = {
+    this.state = {
       dices: [this.randomRoll(),this.randomRoll()]
-    }
-    this.setState(newState);
-    let value = newState.dices[0] + newState.dices[1];
-    //jeśli wykulamy 6 + 6 rzucamy jeszcze raz
-    if (value == 12) {
-      // czekamy 3s i rzucamy jeszcze raz
-      setTimeout(this.secondRollOfDices.bind(this, value), 3000);
-    } else {
-      // idziemy value pól do przozdu
-      // TODO: ...
-      console.log('wylosowano', value);
-      return this.move(value);
-    }
-    //roundNumber++;
+    };
+    return this.game.lockInterface().then(() => {
+      return this.animDices(this.state).then(() => {
+        let value = this.state.dices[0] + this.state.dices[1];
+        if (value == 12) {
+          //jeśli wykulamy 6 + 6 rzucamy jeszcze raz
+          return this.secondRollOfDices(value);
+        } else {
+          // idziemy (value) pól do przozdu
+          console.log('wylosowano', value);
+          return this.move(value);
+        }
+      });
+    });
   }
 
   secondRollOfDices(value) {
-    let newState = {
+    this.state = {
       dices: [this.randomRoll(),this.randomRoll()]
-    }
-    this.setState(newState);
-    value += newState.dices[0] + newState.dices[1];
-    //jeśli wykulamy 6 + 6 drugi raz, idziemy do więzienia
-    if (value == 24) {
-      //idziesz do więzienia
-      alert('go to prison');
-      movePlayer1To(prisonNumber);
-    } else {
-      // idziemy value pól do przozdu
-      // TODO: ...
-      console.log('wylosowano', value);
-      return this.move(value);
-    }
+    };
+    return this.animDices(this.state).then(() => {
+      value += this.state.dices[0] + this.state.dices[1];
+      //jeśli wykulamy 6 + 6 drugi raz, idziemy do więzienia
+      if (value == 24) {
+        //idziesz do więzienia
+        alert('go to prison');
+        let player = this.game.getCurrentPlayer();
+        return this.game.movePlayerTo(prisonNumber);
+      } else {
+        // idziemy (value) pól do przozdu
+        console.log('wylosowano', value);
+        return this.move(value);
+      }
+    });
   }
 
   move(value) {
-    return this.game.moveCurrentPlayer(value).then(() => {
+    let player = this.game.getCurrentPlayer();
+    return this.game.lockInterface().then(() => {
+      this.game.playerMoveAbout(player, value)
+    }).then(() => {
       return this.game.commit();
     }).then(() => {
       return this.game.state.save();
+    }).then(() => {
+      return this.game.unlockInterface();
     });
   }
 
@@ -75,6 +81,18 @@ class Dices extends React.Component {
         <div id="cube-box">{dices}</div>
       </div>
     )
+  }
+
+  animDices(state) {
+    let dicesWrap = document.getElementById('cube-box');
+    dicesWrap.innerHTML = `<div id="cube0">${state.dices[0]}</div><div id="cube1">${state.dices[1]}</div>`;
+    return this.wait(3000);
+  }
+
+  wait(time) {
+    return new Promise((resolve, reject) => {
+      setTimeout(resolve, time)
+    });
   }
 };
 

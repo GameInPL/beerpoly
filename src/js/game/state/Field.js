@@ -1,12 +1,13 @@
 
 //pole
 export class Field  {
-  constructor(idNumber, name) {
-    this.idNumber = idNumber;
-    this.name = name;
-    this.investLvl = 0; //ilosc possadanych budyów
-    this.cost=0;
-    this.owner=null; // do kogo nalezy budynek
+  constructor(data) {
+    this.idNumber = data.idNumber; // identyfikator i pozycja pola
+    this.name = data.name; // nazwa (wyświetlana)
+    this.cost = data.cost || 200; // koszt zakupu
+    this.owner = data.owner || null; // do kogo nalezy budynek
+    this.action = data.action || 'DefaultFieldAction';
+    this.investLvl = 0; //ilosc stopni inwestycji
     this.filedInvestCosts = [
       new FiledInvestCost(),
       new FiledInvestCost(),

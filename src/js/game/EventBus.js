@@ -10,6 +10,12 @@ export class EventBus {
     this.slots[eventName] = [...cbs, cb];
   }
 
+  onAll(eventNames, cb) {
+    for(let i=0; i<eventNames.length; i++) {
+      this.on(eventNames[i], cb);
+    }
+  }
+
   publish(eventName, data) {
     let cbs = this.slots[eventName] || [];
     let promises = [];
