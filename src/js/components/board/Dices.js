@@ -9,16 +9,33 @@ class Dices extends React.Component {
     this.state = {
       dices: this.game.state.dices
     }
+    this.game.eventBus.on('commit', this.commit.bind(this));
+  }
+
+  commit(state) {
+    this.state = state;
+    this.forceUpdate()
   }
 
   randomRoll() {
     return Math.floor(Math.random() * 6 + 1);
   }
 
+  nextTour() {
+    let player = this.game.getCurrentPlayer();
+    player.waitCounter--;
+    return this.game.nextTour().then(() => {
+      return this.game.commit();
+    }).then(() => {
+      return this.game.state.save();
+    });
+  }
+
   rollOfDices() {
-    this.state = {
-      dices: [this.randomRoll(),this.randomRoll()]
-    };
+    this.state.dices = this.game.state.dices = [
+      this.randomRoll(),
+      this.randomRoll()
+    ];
     return this.game.lockInterface().then(() => {
       return this.animDices(this.state).then(() => {
         let value = this.state.dices[0] + this.state.dices[1];
@@ -35,9 +52,10 @@ class Dices extends React.Component {
   }
 
   secondRollOfDices(value) {
-    this.state = {
-      dices: [this.randomRoll(),this.randomRoll()]
-    };
+    this.state.dices = this.game.state.dices = [
+      this.randomRoll(),
+      this.randomRoll()
+    ];
     return this.animDices(this.state).then(() => {
       value += this.state.dices[0] + this.state.dices[1];
       //jeśli wykulamy 6 + 6 drugi raz, idziemy do więzienia
@@ -77,10 +95,23 @@ class Dices extends React.Component {
     }
     return (
       <div className="dices">
-        <button id="rollOfDicesButton" onClick={this.rollOfDices.bind(this)}>Losuj</button>
+        {this.renderGoButton()}
         <div id="cube-box">{dices}</div>
       </div>
     )
+  }
+
+  renderGoButton() {
+    let currentPlayer = this.game.getCurrentPlayer();
+    if (currentPlayer.waitCounter>0) {
+      return (
+        <button id="rollOfDicesButton" onClick={this.nextTour.bind(this)}>Gracz{currentPlayer.idNumber+1} czekasz {currentPlayer.waitCounter} kolejki</button>
+      )
+    } else {
+      return (
+        <button id="rollOfDicesButton" onClick={this.rollOfDices.bind(this)}>Losuj</button>
+      )
+    }
   }
 
   animDices(state) {

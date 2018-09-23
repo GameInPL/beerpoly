@@ -1,4 +1,5 @@
-import {FieldActions} from './FieldActions';
+import {FieldActions} from './actions/FieldActions';
+import {CardActions} from './actions/CardActions';
 import {EventBus} from './EventBus';
 import {State} from './state/State';
 
@@ -8,7 +9,8 @@ export class Game  {
     this.state = new State();
     this.eventBus = new EventBus();
     this.actions = {
-      fields: new FieldActions(this)
+      fields: new FieldActions(this),
+      cards: new CardActions(this)
     };
   }
 

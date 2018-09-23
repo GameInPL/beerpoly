@@ -38,8 +38,7 @@ export class DumpState  {
 
   initChances() {
     this.chances = [];
-    this.chances.push(new Chance('chance1', 'chance1 description', 'eventAfterChance1'));
-    this.chances.push(new Chance('chance2', 'chance2 description', 'eventAfterChance2'));
+    this.chances.push(new Chance('Izba wytrzeźwień', 'Najebałeś się jak szpak. Idziesz do izby wytrzeźwień', 'goToPrisonCardAction'));
   }
 
   initChallenges() {
