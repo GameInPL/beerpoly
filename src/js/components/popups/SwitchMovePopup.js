@@ -36,20 +36,20 @@ class SwitchMovePopup extends React.Component {
   }
 
   selectButton(field) {
-    this.game.closePopup(this.popup)
+    this.game.popups.close(this.popup)
     .then(() => {
-      return this.game.lockInterface();
+      return this.game.interface.lock();
     })
     .then(() => {
       return this.game.commit();
     }).then(() => {
-      return this.game.playerGoTo(this.state.player, field.idNumber)
+      return this.game.players.goTo(this.state.player, field.idNumber)
     }).then(() => {
       return this.game.commit();
     }).then(() => {
       return this.game.state.save();
     }).then(() => {
-      return this.game.unlockInterface();
+      return this.game.interface.unlock();
     });
   }
 };

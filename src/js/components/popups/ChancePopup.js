@@ -23,11 +23,14 @@ class ChancePopup extends React.Component {
 
   okButton() {
     return this.eventBus.publish(this.popup.state.triggerEvent, this.popup).then(() => {
-      return this.game.closePopup(this.popup);
+      return this.game.popups.close(this.popup);
     }).then(() => {
       return this.game.commit();
     }).then(() => {
       return this.game.state.save();
+    }).then(() => {
+      let currentPlayer = this.game.players.getCurrentPlayer();
+      return this.game.players.preventBankrupt(currentPlayer);
     });
   }
 };

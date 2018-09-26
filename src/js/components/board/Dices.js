@@ -21,8 +21,15 @@ class Dices extends React.Component {
     return Math.floor(Math.random() * 6 + 1);
   }
 
+  start() {
+    let player = this.game.players.getCurrentPlayer();
+    return this.game.players.preventBankrupt(player).then((isBankrupt) => {
+      return isBankrupt ? this.nextTour() : this.rollOfDices();
+    });
+  }
+
   nextTour() {
-    let player = this.game.getCurrentPlayer();
+    let player = this.game.players.getCurrentPlayer();
     player.waitCounter--;
     return this.game.nextTour().then(() => {
       return this.game.commit();
@@ -36,7 +43,7 @@ class Dices extends React.Component {
       this.randomRoll(),
       this.randomRoll()
     ];
-    return this.game.lockInterface().then(() => {
+    return this.game.interface.lock().then(() => {
       return this.animDices(this.state).then(() => {
         let value = this.state.dices[0] + this.state.dices[1];
         if (value == 12) {
@@ -62,8 +69,8 @@ class Dices extends React.Component {
       if (value == 24) {
         //idziesz do więzienia
         alert('go to prison');
-        let player = this.game.getCurrentPlayer();
-        return this.game.movePlayerTo(prisonNumber);
+        let player = this.game.players.getCurrentPlayer();
+        return this.game.players.moveTo(prisonNumber);
       } else {
         // idziemy (value) pól do przozdu
         console.log('wylosowano', value);
@@ -73,15 +80,15 @@ class Dices extends React.Component {
   }
 
   move(value) {
-    let player = this.game.getCurrentPlayer();
-    return this.game.lockInterface().then(() => {
-      this.game.playerMoveAbout(player, value)
+    let player = this.game.players.getCurrentPlayer();
+    return this.game.interface.lock().then(() => {
+      this.game.players.moveAbout(player, value)
     }).then(() => {
       return this.game.commit();
     }).then(() => {
       return this.game.state.save();
     }).then(() => {
-      return this.game.unlockInterface();
+      return this.game.interface.unlock();
     });
   }
 
@@ -102,14 +109,14 @@ class Dices extends React.Component {
   }
 
   renderGoButton() {
-    let currentPlayer = this.game.getCurrentPlayer();
+    let currentPlayer = this.game.players.getCurrentPlayer();
     if (currentPlayer.waitCounter>0) {
       return (
         <button id="rollOfDicesButton" onClick={this.nextTour.bind(this)}>Gracz{currentPlayer.idNumber+1} czekasz {currentPlayer.waitCounter} kolejki</button>
       )
     } else {
       return (
-        <button id="rollOfDicesButton" onClick={this.rollOfDices.bind(this)}>Losuj</button>
+        <button id="rollOfDicesButton" onClick={this.start.bind(this)}>Losuj</button>
       )
     }
   }

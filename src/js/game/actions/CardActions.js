@@ -8,15 +8,14 @@ export class CardActions  {
   }
 
   goToPrison(waitCounter) {
-    let currentPlayer = this.game.getCurrentPlayer();
+    let currentPlayer = this.game.players.getCurrentPlayer();
     currentPlayer.waitCounter = waitCounter;
-    this.game.lockInterface().then(() => {
-      debugger
-      return this.game.movePlayerTo(currentPlayer, StateConsts.PrisonFieldId);
+    this.game.interface.lock().then(() => {
+      return this.game.players.moveTo(currentPlayer, StateConsts.PrisonFieldId);
     }).then(() => {
       return this.game.commit();
     }).then(() => {
-      return this.game.unlockInterface();
+      return this.game.interface.unlock();
     });
   }
 

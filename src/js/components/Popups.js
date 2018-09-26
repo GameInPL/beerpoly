@@ -4,6 +4,9 @@ import ChallengePopup from './popups/ChallengePopup';
 import BuyFieldConfirmPopup  from './popups/BuyFieldConfirmPopup';
 import SwitchMovePopup  from './popups/SwitchMovePopup';
 import TakeCardPopup  from './popups/TakeCardPopup';
+import BankruptPopup  from './popups/BankruptPopup';
+import WinnerPopup  from './popups/WinnerPopup';
+import AllBankruptPopup  from './popups/AllBankruptPopup';
 
 class Popups extends React.Component {
 
@@ -30,7 +33,6 @@ class Popups extends React.Component {
         case 'chance':
           popups.push(
             <div key={i} className="popup">
-            {this.renderClose(popup, this.closePopup.bind(this, i))}
             <ChancePopup game={this.game} popup={popup} />
             </div>
           );
@@ -38,7 +40,6 @@ class Popups extends React.Component {
         case 'challenge':
           popups.push(
             <div key={i} className="popup">
-            {this.renderClose(popup, this.closePopup.bind(this, i))}
             <ChallengePopup game={this.game} popup={popup} />
             </div>
           );
@@ -64,6 +65,28 @@ class Popups extends React.Component {
             </div>
           );
           break;
+        case 'bankruptPopup':
+          popups.push(
+            <div key={i} className="popup">
+            <BankruptPopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
+        case 'allBankruptPopup':
+          popups.push(
+            <div key={i} className="popup">
+            <AllBankruptPopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
+        case 'winnerPopup':
+          popups.push(
+            <div key={i} className="popup">
+            {this.renderClose(popup, this.game.popups.close.bind(this, i))}
+            <WinnerPopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
         default:
           throw 'Unknow popup type ${popup.type}';
       }
@@ -78,7 +101,7 @@ class Popups extends React.Component {
 
   closePopup(index) {
     let popup = this.state.popups[index];
-    return this.game.closePopup(popup).then(() => {
+    return this.game.popups.close(popup).then(() => {
       return this.game.commit();
     });
   }

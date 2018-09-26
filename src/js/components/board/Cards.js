@@ -10,7 +10,7 @@ class Cards extends React.Component {
 
   chanceButton() {
     let randomCard = this.state.chances[Math.floor(Math.random()*this.state.chances.length)];
-    this.game.openPopup({
+    this.game.popups.open({
       type: 'chance',
       state: randomCard,
     }).then(() => {
@@ -20,7 +20,7 @@ class Cards extends React.Component {
 
   challengeButton() {
     let randomCard = this.state.challenges[Math.floor(Math.random()*this.state.challenges.length)];
-    this.game.openPopup({
+    this.game.popups.open({
       type: 'challenge',
       state: randomCard,
     }).then(() => {

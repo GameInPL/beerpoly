@@ -25,8 +25,8 @@ class TakeCardPopup extends React.Component {
   }
 
   chanceButton(field) {
-    return this.game.closePopup(this.popup).then(() => {
-      return this.game.takeRandomChance();
+    return this.game.popups.close(this.popup).then(() => {
+      return this.game.cards.takeRandomChance();
     }).then(() => {
       return this.game.commit();
     }).then(() => {
@@ -35,8 +35,8 @@ class TakeCardPopup extends React.Component {
   }
 
   challengeButton(field) {
-    return this.game.closePopup(this.popup).then(() => {
-      return this.game.takeRandomChallenge();
+    return this.game.popups.close(this.popup).then(() => {
+      return this.game.cards.takeRandomChallenge();
     }).then(() => {
       return this.game.commit();
     }).then(() => {

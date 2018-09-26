@@ -25,7 +25,7 @@ class BuyFieldConfirmPopup extends React.Component {
   }
 
   renderBuyButton() {
-    let currentPlayer = this.game.getCurrentPlayer();
+    let currentPlayer = this.game.players.getCurrentPlayer();
     if(currentPlayer.money>=this.state.field.cost) {
       return (
         <div className="btn" onClick={this.buyButton.bind(this)}>Kup</div>
@@ -38,12 +38,12 @@ class BuyFieldConfirmPopup extends React.Component {
   }
 
   buyButton() {
-    let currentPlayer = this.game.getCurrentPlayer();
+    let currentPlayer = this.game.players.getCurrentPlayer();
     let currentPlayerField = this.game.state.fields[currentPlayer.position];
     currentPlayerField.owner = currentPlayer.idNumber;
     currentPlayer.money -= currentPlayerField.cost;
     return this.game.nextTour().then(() => {
-      return this.game.closePopup(this.popup);
+      return this.game.popups.close(this.popup);
     }).then(() => {
       return this.game.commit();
     }).then(() => {
@@ -53,7 +53,7 @@ class BuyFieldConfirmPopup extends React.Component {
 
   cancelButton() {
     return this.game.nextTour().then(() => {
-      return this.game.closePopup(this.popup);
+      return this.game.popups.close(this.popup);
     }).then(() => {
       return this.game.commit();
     }).then(() => {
