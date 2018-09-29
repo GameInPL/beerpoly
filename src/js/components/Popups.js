@@ -7,6 +7,7 @@ import TakeCardPopup  from './popups/TakeCardPopup';
 import BankruptPopup  from './popups/BankruptPopup';
 import WinnerPopup  from './popups/WinnerPopup';
 import AllBankruptPopup  from './popups/AllBankruptPopup';
+import ConfirmChallenge  from './popups/cards/ConfirmChallenge';
 
 class Popups extends React.Component {
 
@@ -32,58 +33,65 @@ class Popups extends React.Component {
       switch (popup.type) {
         case 'chance':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <ChancePopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'challenge':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <ChallengePopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'buyFieldConfirm':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <BuyFieldConfirmPopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'switchMovePopup':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <SwitchMovePopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'takeCardPopup':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <TakeCardPopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'bankruptPopup':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <BankruptPopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'allBankruptPopup':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             <AllBankruptPopup game={this.game} popup={popup} />
             </div>
           );
           break;
         case 'winnerPopup':
           popups.push(
-            <div key={i} className="popup">
+            <div key={i} className='popup'>
             {this.renderClose(popup, this.game.popups.close.bind(this, i))}
             <WinnerPopup game={this.game} popup={popup} />
+            </div>
+          );
+          break;
+        case 'confirmChallenge':
+          popups.push(
+            <div key={i} className='popup'>
+            <ConfirmChallenge game={this.game} popup={popup} />
             </div>
           );
           break;
@@ -92,8 +100,8 @@ class Popups extends React.Component {
       }
     }
     return (
-      <div className="popups">
-        <div className="mask"></div>
+      <div className='popups'>
+        <div className='mask'></div>
         {popups}
       </div>
     )
@@ -108,7 +116,7 @@ class Popups extends React.Component {
 
   renderClose(popup, onCloseBtn) {
     return (
-      <div className="close-btn" onClick={onCloseBtn}>
+      <div className='close-btn' onClick={onCloseBtn}>
         Close
       </div>
     )

@@ -5,6 +5,7 @@ export class CardActions  {
   constructor(game) {
     this.game = game;
     this.game.eventBus.on('goToPrisonCardAction', this.goToPrison.bind(this, 3));
+    this.game.eventBus.on('dialectChelangeAction', this.dialectChelange.bind(this));
   }
 
   goToPrison(waitCounter) {
@@ -19,4 +20,19 @@ export class CardActions  {
     });
   }
 
+  dialectChelange(){
+    this.game.interface.lock().then(() => {
+      return this.game.popups.open({
+        type: 'confirmChallenge',
+        state: {
+          yesAction: 'dialectChelangePass',
+          noAction: 'dialectChelangeFail'
+        }
+      });
+    }).then(() => {
+      return this.game.commit();
+    }).then(() => {
+      return this.game.interface.unlock();
+    });
+  }
 }
