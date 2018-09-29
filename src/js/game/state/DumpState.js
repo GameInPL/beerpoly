@@ -43,6 +43,7 @@ export class DumpState  {
 
   initChallenges() {
     this.challenges = [];
+    /*
     // Zaśpiewaj
     this.challenges.push(new Challenge('Zaśpiewaj', 'Zaśpiewaj. Nie potrafisz? Nie przejmuj się. Twoi znajomi będą cierpieć straszne katusze. Nie wiesz co? odę do radości, kokok koko euro spoko, call me maybe lub coś własnego (jeśli jesteś już tak najebany, że nie pamiętasz żadnej piosenki).', 'nextTour'));
     // Wyśmiej
@@ -55,6 +56,11 @@ export class DumpState  {
     this.challenges.push(new Challenge('Voodoo', 'Do przejechania start trzymasz rękę na ramieniu gracza po prawej', 'nextTour'));
     // Inne
     this.challenges.push(new Challenge('Cytat', 'Powiedz ulubiony cytat. Nie masz? Wymyśl.', 'nextTour'));
+    */
+    //Gwara
+    this.challenges.push(new Challenge('Gwara', 'Ułóż zdanie z minimum dwoma słowami z gwary poznańskiej.', 'dialectChelangeAction'));
+
+
   }
 
   initFields() {
