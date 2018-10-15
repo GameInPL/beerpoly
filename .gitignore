@@ -1,3 +1,5 @@
 node_modules
 dist
 firefox_root
+
+/docker-compose.yaml
