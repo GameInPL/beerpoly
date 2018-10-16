@@ -5,6 +5,7 @@ USER 0
 # make image
 WORKDIR /app
 COPY . .
+RUN rm docker-compose.yaml ||:
 RUN rm -rf node_modules && rm -rf dist && rm -rf .git
 RUN find /app/docker -type f -name '*.sh' -exec sed -i -e 's/\r//' {} \;
 RUN chmod +x /app/docker/custom-entrypoint.sh

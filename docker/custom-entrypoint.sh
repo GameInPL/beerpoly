@@ -16,13 +16,10 @@ server {
 
   root /app/dist;
   index index.html;
-
-  location / {
-    try_files $uri $uri/ =404;
-  }
 }
 
 EndOfConfig
 
 # run nginx proxy
+mkdir -p /run/nginx
 nginx -g "daemon off;"
