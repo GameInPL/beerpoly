@@ -7,7 +7,6 @@ export class TheEnd  {
   }
 
   updateGameStatus() {
-    debugger;
     let winner = this.game.players.getWinner();
     if(winner) {
       if(this.state.status !== 'winner') {
