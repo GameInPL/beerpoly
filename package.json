@@ -1,5 +1,5 @@
 {
-  "name": "beerpoly",
+  "name": "@gameinpl/beerpoly",
   "version": "1.0.0",
   "description": "A beerpoly game code.",
   "main": "index.js",
