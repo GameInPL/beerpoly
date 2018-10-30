@@ -1,8 +1,17 @@
 {
   "name": "beerpoly",
   "version": "1.0.0",
-  "description": "A sandbox environment for Sainsbury's customer preference centrre",
+  "description": "A beerpoly game code.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gameinpl/beerpoly.git"
+  },
+  "author": "gameinpl",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gameinpl/beerpoly/issues"
+  },
   "scripts": {
     "start": "gulp --watch",
     "build": "gulp build",
