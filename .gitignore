@@ -3,3 +3,4 @@ dist
 firefox_root
 
 /docker-compose.yaml
+.DS_Store

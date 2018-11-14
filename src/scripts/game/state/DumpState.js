@@ -39,6 +39,14 @@ export class DumpState  {
   initChances() {
     this.chances = [];
     this.chances.push(new Chance('Izba wytrzeźwień', 'Najebałeś się jak szpak. Idziesz do izby wytrzeźwień', 'goToPrisonCardAction'));
+    this.chances.push(new Chance('Podstępne rogale', 'Świętując 11.11 chciałeś oszczędzić i kupiłeś tańszego rogala. Okazał się robaczywy, a Ty we wstydzie spędzasz kolejną turę, nie wykonując żadnego ruchu.', 'waitOneTourCardAction'));
+    this.chances.push(new Chance('Te samochody', 'Utknąłeś w korku. Musisz cofnąć się na Stadion miejscki. ', 'goToTheCityStadiumCardAction'));
+    this.chances.push(new Chance('Zdrowo, rowerowo... oszczędnie', 'W sezonie letnim zdecydowałeś się poruszać wyłącznie rowerem. Weź z banku 200zł, które zaoszczędziłeś.', 'take200ZLCardAction'));
+    this.chances.push(new Chance('Hazard..', 'Poprawnie obstawiłeś wynik meczu. Otrzymaj 50zł.', 'take50ZLCardAction'));
+    this.chances.push(new Chance('Te biblioteki', 'Nie oddałeś na czas książki do biblioteki Raczyńskich. Tracisz 100zł.', 'lose100ZLCardAction'));
+    this.chances.push(new Chance('Te biblioteki', 'Nie oddałeś na czas książki do biblioteki Raczyńskich. Tracisz 100zł.', 'lose100ZLCardAction'));
+    this.chances.push(new Chance('Szkieły', 'Szkieły znalezły Cię jak jakiegoś ochlapusa nad Wartą. Idziesz do więzienia.', 'goToPrisonCardAction'));
+    this.chances.push(new Chance('Filharmonia', 'Spędziłeś uroczy wieczór w Filharmonii. Kulturą i ogładą przewyższasz swoich przeciwników. Tracą oni po 25zł na bilety, aby móc Cię dogonić.', 'otherPlayersLose25ZL'));
   }
 
   initChallenges() {

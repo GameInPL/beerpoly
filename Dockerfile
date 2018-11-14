@@ -19,8 +19,8 @@ RUN apk --no-cache add --virtual native-deps \
   apk del native-deps
 
 # build
-RUN npm install
-RUN npm run build:production
+RUN npm i
+RUN npm run build
 
 # nginx
 RUN apk update && apk add nginx

@@ -2,7 +2,8 @@
 @import 'board/dice';
 
 .board {
-  background-image: url(/assets/images/plansza.png);
+  background-image: url(/images/board.png);
+  background-size: 100% 100%;
   background-color: black;
   width: 1000px;
   height: 1000px;
