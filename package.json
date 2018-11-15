@@ -4,7 +4,7 @@
   "description": "A beerpoly game code",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production  --progress --profile --colors --display-error-details --display-cached",
+    "build": "webpack --mode=production --progress --profile --colors --display-error-details --display-cached",
     "build-dev": "webpack --mode=development  --progress --profile --colors --display-error-details --display-cached",
     "dev": "webpack-dev-server --hot --open",
     "test": "mocha src/test/.setup.js src/test/**/*-test.js"
@@ -47,7 +47,7 @@
   "dependencies": {
     "@goatsystem/goatjs": "latest",
     "babel-polyfill": "^6.26.0",
-    "imagemin-webpack-plugin": "^2.2.0",
+    "imagemin-webpack-plugin": "^2.3.0",
     "parallax-js": "^3.1.0",
     "react-router-dom": "^4.3.1"
   }

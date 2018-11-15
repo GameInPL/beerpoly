@@ -11,7 +11,6 @@ RUN find /app/docker -type f -name '*.sh' -exec sed -i -e 's/\r//' {} \;
 RUN chmod +x /app/docker/custom-entrypoint.sh
 
 # dependecies
-#RUN npm install -g sass
 RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
   npm install --quiet node-gyp -g &&\
@@ -20,7 +19,7 @@ RUN apk --no-cache add --virtual native-deps \
 
 # build
 RUN npm i
-RUN npm run build
+RUN npm run build-dev
 
 # nginx
 RUN apk update && apk add nginx
