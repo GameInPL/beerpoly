@@ -1,8 +1,17 @@
 {
   "name": "@gameinpl/beerpoly",
   "version": "1.0.0",
-  "description": "A beerpoly game code",
+  "description": "A beerpoly game code.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gameinpl/beerpoly.git"
+  },
+  "author": "gameinpl",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/gameinpl/beerpoly/issues"
+  },
   "scripts": {
     "build": "webpack --mode=production --progress --profile --colors --display-error-details --display-cached",
     "build-dev": "webpack --mode=development  --progress --profile --colors --display-error-details --display-cached",
