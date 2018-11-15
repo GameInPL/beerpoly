@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode=production --progress --profile --colors --display-error-details --display-cached",
     "build-dev": "webpack --mode=development  --progress --profile --colors --display-error-details --display-cached",
-    "dev": "webpack-dev-server --hot --open",
+    "dev": "webpack-dev-server --mode=development --hot --open",
     "test": "mocha src/test/.setup.js src/test/**/*-test.js"
   },
   "repository": {

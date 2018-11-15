@@ -10,8 +10,7 @@ class RightFields extends React.Component {
   }
 
   commit(state) {
-    this.state = state;
-    this.forceUpdate()
+    this.setState(state);
   }
 
   render() {
