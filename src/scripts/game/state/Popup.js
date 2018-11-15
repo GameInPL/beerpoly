@@ -1,5 +1,5 @@
 
-export class Player  {
+export class Popup  {
 
   constructor(type, data) {
     this.type = type;

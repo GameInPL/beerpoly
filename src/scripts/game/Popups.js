@@ -7,6 +7,7 @@ export class Popups  {
   }
 
   open(popup) {
+    debugger;
     popup.id = Math.random();
     return this.eventBus.publish('beforeOpenPopup', this.state).then(() => {
       this.state.popups.push(popup);
