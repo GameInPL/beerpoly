@@ -18,15 +18,6 @@
     "dev": "webpack-dev-server --mode=development --hot --open",
     "test": "mocha src/test/.setup.js src/test/**/*-test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gameinpl/beerpoly.git"
-  },
-  "author": "gameinpl",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/gameinpl/beerpoly/issues"
-  },
   "homepage": "https://github.com/gameinpl/beerpoly#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",

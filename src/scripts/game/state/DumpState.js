@@ -71,129 +71,130 @@ export class DumpState  {
       name: 'Start'
     });
     this.addField({
-      name: 'Zakład Goplany'
+      name: 'Lotnisko Ławica'
+    });
+    this.addField({
+      name: 'Szansa',
+      action: 'SkipAction'
+    });
+    this.addField({
+      name: 'Kino Biedronka '
+    });
+    this.addField({
+      name: 'Podatek'
+    //  action: 'TakeCardAction'
+    });
+    this.addField({
+      name: 'Pętla Tranwajowwa Grunwalt'
+    });
+    this.addField({
+      name: 'Pixel'
     });
     this.addField({
       name: 'Wyzwanie',
       action: 'TakeCardAction'
     });
     this.addField({
-      name: 'Nowe zoo'
+      name: 'Stadion Inea'
     });
     this.addField({
-      name: 'Rynek jeżycki'
-    });
-    this.addField({
-      name: 'Ciuchcia'
-    });
-    this.addField({
-      name: 'Bałtyk Tower'
-    });
-    this.addField({
-      name: 'Stadion Miejski'
-    });
-    this.addField({
-      name: 'Ścieki'
-    });
-    this.addField({
-      name: 'Zakłady Hipolita'
+      name: 'Cmentarz Junikowo'
     });
     this.addField({
       name: 'Izba wytrzeźwień',
       action: 'SkipAction'
     });
     this.addField({
-      name: 'Port Ławica'
+      name: 'Palmiarnia'
     });
     this.addField({
-      name: 'Rynek łazarski'
+      name: 'Elektrociepłownia Veolia'
+    });
+    this.addField({
+      name: 'Rynek Łazarski'
+    });
+    this.addField({
+      name: 'Targi Poznańskie'
+    });
+    this.addField({
+      name: 'Postój taksówek'
+    });
+    this.addField({
+      name: 'Stare Zoor',
+    });
+    this.addField({
+      name: 'Szansa',
+      action: 'SkipAction'
+    });
+    this.addField({
+      name: 'Rynek Jezycki'
+    });
+    this.addField({
+      name: 'Bałtyk Tower'
+    });
+    this.addField({
+      name: 'Okrąglak Punkt Widokowy'
+    });
+    this.addField({
+      name: 'Firharmonia'
     });
     this.addField({
       name: 'Wyzwanie',
       action: 'TakeCardAction'
     });
     this.addField({
-      name: 'Park Wilsona'
+      name: 'Teatr Wielki'
     });
     this.addField({
-      name: 'Cuchcia'
+      name: 'Zamek Cesarski',
     });
     this.addField({
-      name: 'Zagadka',
-      action: 'TakeCardAction'
+      name: 'Dworzec Poznań Głównyi'
     });
     this.addField({
-      name: 'Pixel'
+      name: 'Hotel Bazar'
     });
     this.addField({
-      name: 'Lux'
-    });
-    this.addField({
-      name: 'Blioteka raczyńskich'
-    });
-    this.addField({
-      name: 'Idziesz do izby wytrzeźwień'
-    });
-    this.addField({
-      name: 'Okrąglak'
-    });
-    this.addField({
-      name: 'Wyzwanie',
-      action: 'TakeCardAction'
-    });
-    this.addField({
-      name: 'Filharmonia'
-    });
-    this.addField({
-      name: 'Zus',
-      action: 'TaxAction'
-    });
-    this.addField({
-      name: 'Ciuchcia'
-    });
-    this.addField({
-      name: 'Stary browar'
-    });
-    this.addField({
-      name: 'Zagadka',
-      action: 'TakeCardAction'
-    });
-    this.addField({
-      name: 'Malta'
-    });
-    this.addField({
-      name: 'Baza lotnicza'
-    });
-    this.addField({
-      name: 'Uniwersytet Ekonomiczny'
-    });
-    this.addField({
-      name: 'SPOT'
-    });
-    this.addField({
-      name: 'Elektrownia'
+      name: 'Bibloteka Raczyńsich'
     });
     this.addField({
       name: 'Aquanet'
     });
     this.addField({
-      name: 'Kino'
+      name: 'Fara'
     });
     this.addField({
-      name: 'Ciuchcia'
+      name: 'Idziesz do izby wytrzeźwień'
     });
     this.addField({
-      name: 'Palmiarnia'
+      name: 'Kadedra'
     });
     this.addField({
-      name: 'Wyzwania',
+      name: 'Galeria Posnania'
+    });
+    this.addField({
+      name: 'Szansa',
+      action: 'SkipAction'
+    });
+    this.addField({
+      name: '31 Baza Lotnicza'
+    });
+    this.addField({
+      name: 'Dworzec Rnodo Śródki'
+    });
+    this.addField({
+      name: 'Wyzwanie',
       action: 'TakeCardAction'
     });
     this.addField({
-      name: 'Teatr nowy'
+      name: 'Zakłady Cegielskiego'
     });
     this.addField({
-      name: 'Stare Zoo'
+      name: 'Inflacja',
+      action: 'SkipAction'
+    });
+    this.addField({
+      name: 'Stary Browar'
     });
   }
 

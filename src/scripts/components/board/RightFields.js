@@ -16,28 +16,31 @@ class RightFields extends React.Component {
   render() {
     return (
       <div className="right-box">
-        <div className={'card-right owner-' + this.state.fields[11].owner} id="p11">
-          <div className="label">Port Ławica</div>
+        <div className={'card-right owner-' + this.state.fields[21].owner} id="p21">
+          <div className="label">Firharmonia</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[12].owner} id="p12">
-          <div className="label">Rynek łazarski</div>
+        <div className={'card-right owner-' + this.state.fields[22].owner} id="p22">
         </div>
-        <div className={'card-right owner-' + this.state.fields[13].owner} id="p13">
+        <div className={'card-right owner-' + this.state.fields[23].owner} id="p23">
+          <div className="label">Teatr Wielki</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[14].owner} id="p14">
-          <div className="label">Park Wilsona</div>
+        <div className={'card-right owner-' + this.state.fields[24].owner} id="p24">
+          <div className="label">Zamek Cesarski</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[15].owner} id="p15">
+        <div className={'card-right owner-' + this.state.fields[25].owner} id="p25">
+          <div className="label">Dworzec Poznań Główny</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[16].owner} id="p16">
+        <div className={'card-right owner-' + this.state.fields[26].owner} id="p26">
+          <div className="label">Hotel Bazar</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[17].owner} id="p17">
-          <div className="label">Pixel</div>
+        <div className={'card-right owner-' + this.state.fields[27].owner} id="p27">
+          <div className="label">Bibloteka Raczyńsich</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[18].owner} id="p18">
+        <div className={'card-right owner-' + this.state.fields[28].owner} id="p28">
+          <div className="label">Aquanet</div>
         </div>
-        <div className={'card-right owner-' + this.state.fields[19].owner} id="p19">
-          <div className="label">Biblioteka raczyńskich</div>
+        <div className={'card-right owner-' + this.state.fields[29].owner} id="p29">
+          <div className="label">Fara</div>
         </div>
       </div>
     )
