@@ -2,9 +2,10 @@
 @import 'board/dice';
 
 .board {
-  background-image: url(/images/board.png);
+// background-image: url(/images/board.png);
+ background-image: url('/images/cut the board/Ramka nano.png');
   background-size: 100% 100%;
-  background-color: black;
+//  background-color: black;
   width: 1000px;
   height: 1000px;
   margin: auto;
@@ -13,7 +14,132 @@
     width: 1000px;
     height: 140px;
     float: left;
+
+}
+
+
+
+  #p0{
+    background: url('/images/cut the board/Start.png') ;
   }
+  #p1{
+    background: url('/images/cut the board/1.png') ;
+  }
+  #p2{
+    background: url('/images/cut the board/SzansaL.png') ;
+  }
+  #p3{
+    background: url('/images/cut the board/3.png') ;
+  }
+  #p4{
+    background: url('/images/cut the board/PodatekL.png') ;
+  }
+  #p5{
+    background: url('/images/cut the board/5.png') ;
+  }
+  #p6{
+    background: url('/images/cut the board/6.png') ;
+  }
+  #p7{
+    background: url('/images/cut the board/WyzwanieL.png') ;
+  }
+  #p8{
+    background: url('/images/cut the board/8.png') ;
+  }
+  #p9{
+    background: url('/images/cut the board/9.png') ;
+  }
+  #p10{
+    background: url('/images/cut the board/10.png') ;
+  }
+  #p11{
+    background: url('/images/cut the board/11.png') ;
+  }
+  #p12{
+    background: url('/images/cut the board/12.png') ;
+  }
+  #p13{
+    background: url('/images/cut the board/13.png') ;
+  }
+  #p14{
+    background: url('/images/cut the board/14.png') ;
+  }
+  #p15{
+    background: url('/images/cut the board/15.png') ;
+  }
+  #p16{
+    background: url('/images/cut the board/16.png') ;
+  }
+  #p17{
+    background: url('/images/cut the board/Szansa.png') ;
+  }
+  #p18{
+    background: url('/images/cut the board/18.png') ;
+  }
+  #p19{
+    background: url('/images/cut the board/19.png') ;
+  }
+  #p20{
+    background: url('/images/cut the board/20.png') ;
+  }
+  #p21{
+    background: url('/images/cut the board/21.png') ;
+  }
+  #p22{
+    background: url('/images/cut the board/WyzwanieR.png') ;
+  }
+  #p23{
+    background: url('/images/cut the board/23.png') ;
+  }
+  #p24{
+    background: url('/images/cut the board/24.png') ;
+  }
+  #p25{
+    background: url('/images/cut the board/25.png') ;
+  }
+  #p26{
+    background: url('/images/cut the board/26.png') ;
+  }
+  #p27{
+    background: url('/images/cut the board/27.png') ;
+  }
+  #p28{
+    background: url('/images/cut the board/28.png') ;
+  }
+  #p29{
+    background: url('/images/cut the board/29.png') ;
+  }
+  #p30{
+    background: url('/images/cut the board/30.png') ;
+  }
+  #p31{
+    background: url('/images/cut the board/31.png') ;
+  }
+  #p32{
+    background: url('/images/cut the board/32.png') ;
+  }
+  #p33{
+    background: url('/images/cut the board/Szansa.png') ;
+  }
+  #p34{
+    background: url('/images/cut the board/34.png') ;
+  }
+  #p35{
+    background: url('/images/cut the board/35.png') ;
+  }
+  #p36{
+    background: url('/images/cut the board/Wyzwanie.png') ;
+  }
+  #p37{
+    background: url('/images/cut the board/37.png') ;
+  }
+  #p38{
+    background: url('/images/cut the board/inflacia.png') ;
+  }
+  #p39{
+    background: url('/images/cut the board/39.png') ;
+  }
+
 
   .card-big {
     width: 140px;
@@ -100,6 +226,7 @@
   .logo {
     width: 720px;
     height: 720px;
+    background: url('/images/cut the board/mini.png') ;
     float: left;
   }
 
