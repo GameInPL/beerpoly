@@ -2,7 +2,7 @@
 @import 'board/dice';
 
 .board {
-  background-size: 100% 100%;
+  background-size: 100%;
   width: 1000px;
   height: 1000px;
   margin: auto;
@@ -20,169 +20,211 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/cut the board/Ramka nano.png");
+    background-image: url("/images/board/Ramka nano.png");
     z-index: 1000;
     pointer-events: none;
   }
 
   #p0 {
-    background: url("/images/cut the board/Start.png");
+    background: url("/images/board/Start.png");
+     background-size: cover;
+
   }
 
   #p1 {
-    background: url("/images/cut the board/1.png");
+    background: url("/images/board/1.png");
+    background-size: cover;
   }
 
   #p2 {
-    background: url("/images/cut the board/SzansaL.png");
+    background: url("/images/board/SzansaL.png");
+    background-size: cover;
   }
 
   #p3 {
-    background: url("/images/cut the board/3.png");
+    background: url("/images/board/3.png");
+    background-size: cover;
   }
 
   #p4 {
-    background: url("/images/cut the board/PodatekL.png");
+    background: url("/images/board/PodatekL.png");
+    background-size: cover;
   }
 
   #p5 {
-    background: url("/images/cut the board/5.png");
+    background: url("/images/board/5.png");
+    background-size: cover;
   }
 
   #p6 {
-    background: url("/images/cut the board/6.png");
+    background: url("/images/board/6.png");
+    background-size: cover;
   }
 
   #p7 {
-    background: url("/images/cut the board/WyzwanieL.png");
+    background: url("/images/board/WyzwanieL.png");
+    background-size: cover;
   }
 
   #p8 {
-    background: url("/images/cut the board/8.png");
+    background: url("/images/board/8.png");
+    background-size: cover;
   }
 
   #p9 {
-    background: url("/images/cut the board/9.png");
+    background: url("/images/board/9.png");
+    background-size: cover;
   }
 
   #p10 {
-    background: url("/images/cut the board/10.png");
+    background: url("/images/board/10.png");
+    background-size: cover;
   }
 
   #p11 {
-    background: url("/images/cut the board/11.png");
+    background: url("/images/board/11.png");
+    background-size: cover;
   }
 
   #p12 {
-    background: url("/images/cut the board/12.png");
+    background: url("/images/board/12.png");
+    background-size: cover;
   }
 
   #p13 {
-    background: url("/images/cut the board/13.png");
+    background: url("/images/board/13.png");
+    background-size: cover;
   }
 
   #p14 {
-    background: url("/images/cut the board/14.png");
+    background: url("/images/board/14.png");
+    background-size: cover;
   }
 
   #p15 {
-    background: url("/images/cut the board/15.png");
+    background: url("/images/board/15.png");
+    background-size: cover;
   }
 
   #p16 {
-    background: url("/images/cut the board/16.png");
+    background: url("/images/board/16.png");
+    background-size: cover;
   }
 
   #p17 {
-    background: url("/images/cut the board/Szansa.png");
+    background: url("/images/board/SzansaU.png");
+    background-size: cover;
   }
 
   #p18 {
-    background: url("/images/cut the board/18.png");
+    background: url("/images/board/18.png");
+    background-size: cover;
   }
 
   #p19 {
-    background: url("/images/cut the board/19.png");
+    background: url("/images/board/19.png");
+    background-size: cover;
   }
 
   #p20 {
-    background: url("/images/cut the board/20.png");
+    background: url("/images/board/20.png");
+    background-size: cover;
   }
 
   #p21 {
-    background: url("/images/cut the board/21.png");
+    background: url("/images/board/21.png");
+    background-size: cover;
   }
 
   #p22 {
-    background: url("/images/cut the board/WyzwanieR.png");
+    background: url("/images/board/WyzwanieR.png");
+    background-size: cover;
   }
 
   #p23 {
-    background: url("/images/cut the board/23.png");
+    background: url("/images/board/23.png");
+    background-size: cover;
   }
 
   #p24 {
-    background: url("/images/cut the board/24.png");
+    background: url("/images/board/24.png");
+    background-size: cover;
   }
 
   #p25 {
-    background: url("/images/cut the board/25.png");
+    background: url("/images/board/25.png");
+    background-size: cover;
   }
 
   #p26 {
-    background: url("/images/cut the board/26.png");
+    background: url("/images/board/26.png");
+    background-size: cover;
   }
 
   #p27 {
-    background: url("/images/cut the board/27.png");
+    background: url("/images/board/27.png");
+    background-size: cover;
   }
 
   #p28 {
-    background: url("/images/cut the board/28.png");
+    background: url("/images/board/28.png");
+    background-size: cover;
   }
 
   #p29 {
-    background: url("/images/cut the board/29.png");
+    background: url("/images/board/29.png");
+    background-size: cover;
   }
 
   #p30 {
-    background: url("/images/cut the board/30.png");
+    background: url("/images/board/30.png");
+    background-size: cover;
   }
 
   #p31 {
-    background: url("/images/cut the board/31.png");
+    background: url("/images/board/31.png");
+    background-size: cover;
   }
 
   #p32 {
-    background: url("/images/cut the board/32.png");
+    background: url("/images/board/32.png");
+    background-size: cover;
   }
 
   #p33 {
-    background: url("/images/cut the board/Szansa.png");
+    background: url("/images/board/Szansa.png");
+    background-size: cover;
   }
 
   #p34 {
-    background: url("/images/cut the board/34.png");
+    background: url("/images/board/34.png");
+    background-size: cover;
   }
 
   #p35 {
-    background: url("/images/cut the board/35.png");
+    background: url("/images/board/35.png");
+    background-size: cover;
   }
 
   #p36 {
-    background: url("/images/cut the board/Wyzwanie.png");
+    background: url("/images/board/Wyzwanie.png");
+    background-size: cover;
   }
 
   #p37 {
-    background: url("/images/cut the board/37.png");
+    background: url("/images/board/37.png");
+    background-size: cover;
   }
 
   #p38 {
-    background: url("/images/cut the board/inflacia.png");
+    background: url("/images/board/inflacia.png");
+    background-size: cover;
+
   }
 
   #p39 {
-    background: url("/images/cut the board/39.png");
+    background: url("/images/board/39.png");
+    background-size: cover;
   }
 
   .card-big {
@@ -270,7 +312,7 @@
   .logo {
     width: 720px;
     height: 720px;
-    background: url("/images/cut the board/mini.png");
+    background: url("/images/board/minigot.png");
     float: left;
   }
 

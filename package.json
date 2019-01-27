@@ -13,6 +13,7 @@
     "url": "https://github.com/gameinpl/beerpoly/issues"
   },
   "scripts": {
+    "start": "npm run dev",
     "build": "webpack --mode=production --progress --profile --colors --display-error-details --display-cached",
     "build-dev": "webpack --mode=development  --progress --profile --colors --display-error-details --display-cached",
     "dev": "webpack-dev-server --mode=development --hot --open",

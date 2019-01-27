@@ -17,28 +17,28 @@ class LeftFields extends React.Component {
     return (
       <div className="left-box">
         <div className={'card-left owner-' + this.state.fields[9].owner} id="p9">
-          <div className="label">Cmentarz Junikowo</div>
+          <div className="label">{/*Cmentarz Junikowo*/}</div>
         </div>
         <div className={'card-left owner-' + this.state.fields[8].owner} id="p8">
-          <div className="label">STadion Inea</div>
+          <div className="label">{/*STadion Inea*/}</div>
         </div>
         <div className={'card-left owner-' + this.state.fields[7].owner} id="p7">
         </div>
         <div className={'card-left owner-' + this.state.fields[6].owner} id="p6">
-          <div className="label">Pixel</div>
+          <div className="label">{/*Pixel*/}</div>
         </div>
         <div className={'card-left owner-' + this.state.fields[5].owner} id="p5">
-          <div className="label">Pętla Tranwajowwa Grunwalt</div>
+          <div className="label">{/*Pętla Tranwajowwa Grunwalt*/}</div>
         </div>
         <div className={'card-left owner-' + this.state.fields[4].owner} id="p4">
         </div>
         <div className={'card-left owner-' + this.state.fields[3].owner} id="p3">
-          <div className="label">Kino Biedronka </div>
+          <div className="label">{/*Kino Biedronka */}</div>
         </div>
         <div className={'card-left owner-' + this.state.fields[2].owner} id="p2">
         </div>
         <div className={'card-left owner-' + this.state.fields[1].owner} id="p1">
-          <div className="label">Lotnisko Ławica</div>
+          <div className="label">{/*Lotnisko Ławica*/}</div>
         </div>
       </div>
     )

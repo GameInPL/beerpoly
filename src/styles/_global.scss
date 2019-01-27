@@ -5,7 +5,7 @@ body {
   font-family: Arial;
   width: 100vw;
   height: 100vh;
-  //overflow: hidden; - remove it to fix problem with board scroll 
+  //overflow: hidden; - remove it to fix problem with board scroll
   background-color: #696969;
 }
 
@@ -85,40 +85,4 @@ button:hover {
 
 .clear {
   clear: both;
-}
-
-
-.card_chance {
-  display: block;
-  margin: 20% 21% 5% 5% ;
-  background-color: #fff;
-  border: 3px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  transition: .3s;
-  float:left;
-}
-
-.card_chance:hover {
-  background-color: #000;
-  color: white;
-  border: 3px solid white;
-}
-
-
-.card_challenge {
-  display: block;
-  margin: 20% 5% 5% 21% ;
-  background-color: #fff;
-  border: 3px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  transition: .3s;
-  float: left;
-}
-
-.card_challenge:hover {
-  background-color: #000;
-  color: white;
-  border: 3px solid white;
 }

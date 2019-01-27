@@ -1,26 +1,51 @@
-.owner-0{
+.owner-0::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: #FFD700;
   opacity:0.5;
 }
 
-.owner-1{
+.owner-1::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: red;
-  opacity:0.5;
+  opacity: 0.5;
 }
-.owner-2{
+
+.owner-2::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: #7FFFD4;
   opacity:0.5;
 }
-.owner-3{
+.owner-3::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: #8A2BE2;
   opacity:0.5;
 }
-.owner-4{
+.owner-4::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: #20B2AA;
   opacity:0.5;
 }
 
-.owner-5{
+.owner-5::after{
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   background: #0000CD;
   opacity:0.5;
 }
