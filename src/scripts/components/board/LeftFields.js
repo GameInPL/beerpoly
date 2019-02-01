@@ -16,29 +16,44 @@ class LeftFields extends React.Component {
   render() {
     return (
       <div className="left-box">
-        <div className={'card-left owner-' + this.state.fields[39].owner} id="p39">
-          <div className="label">Stare Zoo</div>
+      <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[9].owner} id="p9">
+        <div id="board-border-signs-cross" class="board-border-signsL"></div>
+          <div className="label">{/*Cmentarz Junikowo*/}</div>
         </div>
-        <div className={'card-left owner-' + this.state.fields[38].owner} id="p38">
-          <div className="label">Teatr nowy</div>
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[8].owner} id="p8">
+        <div id="board-border-signs-cross" class="board-border-signsL"></div>
+          <div className="label">{/*STadion Inea*/}</div>
         </div>
-        <div className={'card-left owner-' + this.state.fields[37].owner} id="p37">
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[7].owner} id="p7">
         </div>
-        <div className={'card-left owner-' + this.state.fields[36].owner} id="p36">
-          <div className="label">Palmiarnia</div>
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[6].owner} id="p6">
+        <div id="board-border-signs-cross" class="board-border-signsL"></div>
+          <div className="label">{/*Pixel*/}</div>
         </div>
-        <div className={'card-left owner-' + this.state.fields[35].owner} id="p35">
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[5].owner} id="p5">
+        <div id="board-border-signs-Bus-stationL" class="board-border-signsL"></div>
+          <div className="label">{/*Pętla Tranwajowwa Grunwalt*/}</div>
         </div>
-        <div className={'card-left owner-' + this.state.fields[34].owner} id="p34">
-          <div className="label">Kino</div>
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[4].owner} id="p4">
         </div>
-        <div className={'card-left owner-' + this.state.fields[33].owner} id="p33">
-          <div className="label">Aquanet</div>
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[3].owner} id="p3">
+        <div id="board-border-signs-cross" class="board-border-signsL"></div>
+          <div className="label">{/*Kino Biedronka */}</div>
         </div>
-        <div className={'card-left owner-' + this.state.fields[32].owner} id="p32">
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[2].owner} id="p2">
         </div>
-        <div className={'card-left owner-' + this.state.fields[31].owner} id="p31">
-          <div className="label">SPOT</div>
+        <div class="board-border-littleL"></div>
+        <div className={'card-left owner-' + this.state.fields[1].owner} id="p1">
+        <div id="board-border-signs-Airport" class="board-border-signsL"></div>
+          <div className="label">{/*Lotnisko Ławica*/}</div>
         </div>
       </div>
     )

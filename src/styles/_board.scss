@@ -2,17 +2,381 @@
 @import 'board/dice';
 
 .board {
-  background-image: url(/images/board.png);
-  background-size: 100% 100%;
-  background-color: black;
+  background-size: 100%;
   width: 1000px;
   height: 1000px;
   margin: auto;
   position: relative;
+
   .top-box {
     width: 1000px;
     height: 140px;
     float: left;
+  }
+
+  .board-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/is/board/Ramka nano.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleL {
+    position: absolute;
+    width: 140px;
+    height: 80px;
+    background-image: url("/images/board/frameL.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleR {
+    position: absolute;
+    width: 140px;
+    height: 80px;
+    background-image: url("/images/board/frameR.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleU {
+    position: absolute;
+    width: 80px;
+    height: 140px;
+    background-image: url("/images/board/frameU.png");
+    pointer-events: none;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .board-border-littleD {
+    position: absolute;
+    width: 80px;
+    height: 140px;
+    background-image: url("/images/board/frameD.png");
+    pointer-events: none;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .board-border-bigLU {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigLU.png");
+  }
+
+  .board-border-bigLD {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigLD.png");
+  }
+
+  .board-border-bigRU {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigRU.png");
+  }
+
+  .board-border-bigRD {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigRD.png");
+  }
+
+  .board-border-signsL {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 50px 0px 0px 115px;
+    background-size: 30px;
+    z-index: 1005;
+  }
+
+  .board-border-signsU {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 115px 0px 0px 0px;
+    background-size: 30px;
+    z-index: 1005;
+  }
+
+  .board-border-signR {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -5px;
+    background-size: 30px;
+    z-index: 1005;
+  }
+
+  .board-border-signsD {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -5px;
+    background-size: 30px;
+    z-index: 1005;
+  }
+
+  #board-border-signs-Airport {
+    background-image: url("/images/board/Airport.png");
+  }
+
+  #board-border-signs-zoombi {
+    background-image: url("/images/board/zoombi.png");
+  }
+
+  #board-border-signs-Energy {
+    background-image: url("/images/board/Energy.png");
+  }
+
+  #board-border-signs-Bus-station {
+    background-image: url("/images/board/Bus-station.png");
+  }
+
+  #board-border-signs-Bus-stationL {
+    background-image: url("/images/board/Bus-stationL.png");
+  }
+
+  #board-border-signs-Bus-stationR {
+    background-image: url("/images/board/Bus-stationR.png");
+  }
+
+  #board-border-signs-Bus-stationU {
+    background-image: url("/images/board/Bus-stationU.png");
+  }
+
+  #board-border-signs-new-town {
+    background-image: url("/images/board/new-town.png");
+  }
+
+  #board-border-signs-Old-Town {
+    background-image: url("/images/board/Old-Town.png");
+  }
+
+  #board-border-signs-Wilda-district {
+    background-image: url("/images/board/Wilda-district.png");
+  }
+
+  #board-border-signs-zoo {
+    background-image: url("/images/board/zoo.png");
+  }
+
+  #board-border-signs-cross {
+    background-image: url("/images/board/cross.png");
+  }
+
+  #p0 {
+    background: url("/images/board/Start.png");
+    background-size: cover;
+  }
+
+  #p1 {
+    background: url("/images/board/1.png");
+    background-size: cover;
+  }
+
+  #p2 {
+    background: url("/images/board/SzansaL.png");
+    background-size: cover;
+  }
+
+  #p3 {
+    background: url("/images/board/3.png");
+    background-size: cover;
+  }
+
+  #p4 {
+    background: url("/images/board/PodatekL.png");
+    background-size: cover;
+  }
+
+  #p5 {
+    background: url("/images/board/5.png");
+    background-size: cover;
+  }
+
+  #p6 {
+    background: url("/images/board/6.png");
+    background-size: cover;
+  }
+
+  #p7 {
+    background: url("/images/board/WyzwanieL.png");
+    background-size: cover;
+  }
+
+  #p8 {
+    background: url("/images/board/8.png");
+    background-size: cover;
+  }
+
+  #p9 {
+    background: url("/images/board/9.png");
+    background-size: cover;
+  }
+
+  #p10 {
+    background: url("/images/board/10.png");
+    background-size: cover;
+  }
+
+  #p11 {
+    background: url("/images/board/11.png");
+    background-size: cover;
+  }
+
+  #p12 {
+    background: url("/images/board/12.png");
+    background-size: cover;
+  }
+
+  #p13 {
+    background: url("/images/board/13.png");
+    background-size: cover;
+  }
+
+  #p14 {
+    background: url("/images/board/14.png");
+    background-size: cover;
+  }
+
+  #p15 {
+    background: url("/images/board/15.png");
+    background-size: cover;
+  }
+
+  #p16 {
+    background: url("/images/board/16.png");
+    background-size: cover;
+  }
+
+  #p17 {
+    background: url("/images/board/SzansaU.png");
+    background-size: cover;
+  }
+
+  #p18 {
+    background: url("/images/board/18.png");
+    background-size: cover;
+  }
+
+  #p19 {
+    background: url("/images/board/19.png");
+    background-size: cover;
+  }
+
+  #p20 {
+    background: url("/images/board/20.png");
+    background-size: cover;
+  }
+
+  #p21 {
+    background: url("/images/board/21.png");
+    background-size: cover;
+  }
+
+  #p22 {
+    background: url("/images/board/WyzwanieR.png");
+    background-size: cover;
+  }
+
+  #p23 {
+    background: url("/images/board/23.png");
+    background-size: cover;
+  }
+
+  #p24 {
+    background: url("/images/board/24.png");
+    background-size: cover;
+  }
+
+  #p25 {
+    background: url("/images/board/25.png");
+    background-size: cover;
+  }
+
+  #p26 {
+    background: url("/images/board/26.png");
+    background-size: cover;
+  }
+
+  #p27 {
+    background: url("/images/board/27.png");
+    background-size: cover;
+  }
+
+  #p28 {
+    background: url("/images/board/28.png");
+    background-size: cover;
+  }
+
+  #p29 {
+    background: url("/images/board/29.png");
+    background-size: cover;
+  }
+
+  #p30 {
+    background: url("/images/board/30.png");
+    background-size: cover;
+  }
+
+  #p31 {
+    background: url("/images/board/31.png");
+    background-size: cover;
+  }
+
+  #p32 {
+    background: url("/images/board/32.png");
+    background-size: cover;
+  }
+
+  #p33 {
+    background: url("/images/board/Szansa.png");
+    background-size: cover;
+  }
+
+  #p34 {
+    background: url("/images/board/34.png");
+    background-size: cover;
+  }
+
+  #p35 {
+    background: url("/images/board/35.png");
+    background-size: cover;
+  }
+
+  #p36 {
+    background: url("/images/board/Wyzwanie.png");
+    background-size: cover;
+  }
+
+  #p37 {
+    background: url("/images/board/37.png");
+    background-size: cover;
+  }
+
+  #p38 {
+    background: url("/images/board/inflacia.png");
+    background-size: cover;
+  }
+
+  #p39 {
+    background: url("/images/board/39.png");
+    background-size: cover;
   }
 
   .card-big {
@@ -47,8 +411,7 @@
     height: 140px;
     float: left;
     cursor: pointer;
-    filter: brightness(70%);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
   }
@@ -76,8 +439,7 @@
     width: 140px;
     height: 80px;
     cursor: pointer;
-    filter: brightness(70%);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
   }
@@ -100,6 +462,7 @@
   .logo {
     width: 720px;
     height: 720px;
+    background: url("/images/board/minigot.png");
     float: left;
   }
 
@@ -114,8 +477,7 @@
     width: 140px;
     height: 80px;
     cursor: pointer;
-    filter: brightness(70%);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
   }
@@ -150,8 +512,7 @@
     width: 80px;
     height: 140px;
     cursor: pointer;
-    filter: brightness(70%);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
   }
