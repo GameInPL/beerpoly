@@ -20,7 +20,7 @@ class BottomFields extends React.Component {
         <div class="board-border-bigLD"></div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[39].owner} id="p39">
-        <div class="board-border-signs-Wilda-district"></div>
+        <div id="board-border-signs-Wilda-district" class="board-border-signsD"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Stary Browar*/}</div>
         </div>
@@ -28,7 +28,7 @@ class BottomFields extends React.Component {
         <div class="board-border-littleU"></div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[37].owner} id="p37">
-        <div class="board-border-signs-Wilda-district"></div>
+        <div id="board-border-signs-Wilda-district" class="board-border-signsD"></div>
         <div class="board-border-signs"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Zakłady Cegielskiego*/}</div>
@@ -37,12 +37,12 @@ class BottomFields extends React.Component {
         <div class="board-border-littleU"></div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[35].owner} id="p35">
-        <div class="board-border-signs-Bus-stationU"></div>
+        <div id="board-border-signs-Bus-stationU" class="board-border-signsD"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Dworzec Rnodo Śródki*/}</div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[34].owner} id="p34">
-        <div class="board-border-signs-new-town"></div>
+        <div id="board-border-signs-new-town" class="board-border-signsD"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*31 Baza Lotnicza*/}</div>
         </div>
@@ -50,12 +50,12 @@ class BottomFields extends React.Component {
         <div class="board-border-littleU"></div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[32].owner} id="p32">
-        <div class="board-border-signs-new-town"></div>
+        <div id="board-border-signs-new-town" class="board-border-signsD"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Galeria Posnania*/}</div>
         </div>
         <div className={'card-bottom owner-' + this.state.fields[31].owner} id="p31">
-        <div class="board-border-signs-new-town"></div>
+        <div id="board-border-signs-new-town" class="board-border-signsD"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Kadedra*/}</div>
         </div>
