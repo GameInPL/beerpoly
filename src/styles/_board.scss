@@ -53,6 +53,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    z-index: 1000;
   }
 
   .board-border-littleD {
@@ -65,6 +66,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    z-index: 1000;
   }
 
   .board-border-bigLU {
@@ -72,6 +74,7 @@
     width: 140px;
     height: 140px;
     background-image: url("/images/board/frameBigLU.png");
+    z-index: 1000;
   }
 
   .board-border-bigLD {
@@ -86,6 +89,7 @@
     width: 140px;
     height: 140px;
     background-image: url("/images/board/frameBigRU.png");
+    z-index: 1000;
   }
 
   .board-border-bigRD {
@@ -93,6 +97,7 @@
     width: 140px;
     height: 140px;
     background-image: url("/images/board/frameBigRD.png");
+    z-index: 1000;
   }
 
   .board-border-signsL {
