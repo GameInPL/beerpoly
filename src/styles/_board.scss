@@ -20,15 +20,193 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/board/Ramka nano.png");
+    background-image: url("/is/board/Ramka nano.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleL {
+    position: absolute;
+    width: 140px;
+    height: 80px;
+    background-image: url("/images/board/frameL.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleR {
+    position: absolute;
+    width: 140px;
+    height: 80px;
+    background-image: url("/images/board/frameR.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .board-border-littleU {
+    position: absolute;
+    width: 80px;
+    height: 140px;
+    background-image: url("/images/board/frameU.png");
+    pointer-events: none;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .board-border-littleD {
+    position: absolute;
+    width: 80px;
+    height: 140px;
+    background-image: url("/images/board/frameD.png");
+    pointer-events: none;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .board-border-bigLU {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigLU.png");
+  }
+
+  .board-border-bigLD {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigLD.png");
+  }
+
+  .board-border-bigRU {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigRU.png");
+  }
+
+  .board-border-bigRD {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-image: url("/images/board/frameBigRD.png");
+  }
+
+
+  .board-border-signs-Airport {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Airport.png");
+  }
+
+  .board-border-signs-zoombi{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/zoombi.png");
+  }
+
+  .board-border-signs-Energy {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Energy.png");
+  }
+
+  .board-border-signs-Bus-station {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Bus-station.png");
+  }
+  .board-border-signs-Bus-stationL {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Bus-stationL.png");
+  }
+
+  .board-border-signs-Bus-stationR {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Bus-stationR.png");
+  }
+
+  .board-border-signs-Bus-stationU {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Bus-stationU.png");
+  }
+
+
+  .board-border-signs-new-town {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/new-town.png");
+  }
+
+  .board-border-signs-Old-Town {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Old-Town.png");
+  }
+
+  .board-border-signs-Wilda-district {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/Wilda-district.png");
+  }
+
+  .board-border-signs-zoo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/zoo.png");
+  }
+
+
+  .board-border-signs-cross {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    background-image: url("/images/board/cross.png");
+  }
+
+  .board-border-older {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/iard/Ramka nano.png");
     z-index: 1000;
     pointer-events: none;
   }
 
   #p0 {
     background: url("/images/board/Start.png");
-     background-size: cover;
-
+    background-size: cover;
   }
 
   #p1 {
@@ -219,7 +397,6 @@
   #p38 {
     background: url("/images/board/inflacia.png");
     background-size: cover;
-
   }
 
   #p39 {
@@ -259,7 +436,6 @@
     height: 140px;
     float: left;
     cursor: pointer;
-    filter: brightness(70%);
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
@@ -288,7 +464,6 @@
     width: 140px;
     height: 80px;
     cursor: pointer;
-    filter: brightness(70%);
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
@@ -327,7 +502,6 @@
     width: 140px;
     height: 80px;
     cursor: pointer;
-    filter: brightness(70%);
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
@@ -363,7 +537,6 @@
     width: 80px;
     height: 140px;
     cursor: pointer;
-    filter: brightness(70%);
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
     position: relative;
