@@ -1,51 +1,88 @@
-.owner-0::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #FFD700;
-  opacity:0.5;
+.owner-0{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #FFD700;
+    border-radius: 100%;
+    opacity:0.5;
+  }
 }
 
-.owner-1::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: red;
-  opacity: 0.5;
+
+.owner-1{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: red;
+    border-radius: 100%;
+    opacity: 0.5;
+  }
 }
 
-.owner-2::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #7FFFD4;
-  opacity:0.5;
+.owner-2{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #7FFFD4;
+    border-radius: 100%;
+    opacity:0.5;
+  }
 }
-.owner-3::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #8A2BE2;
-  opacity:0.5;
+.owner-3{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #8A2BE2;
+    border-radius: 100%;
+    opacity:0.5;
+  }
 }
-.owner-4::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #20B2AA;
-  opacity:0.5;
+.owner-4{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #20B2AA;
+    border-radius: 100%;
+    opacity:0.5;
+  }
 }
 
-.owner-5::after{
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  background: #0000CD;
-  opacity:0.5;
+.owner-5{
+  .board-border-signsU::after,
+  .board-border-signsR::after,
+  .board-border-signsD::after,
+  .board-border-signsL::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #0000CD;
+    border-radius: 100%;
+    opacity:0.5;
+  }
 }

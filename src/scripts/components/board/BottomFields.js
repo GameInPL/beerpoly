@@ -29,7 +29,6 @@ class BottomFields extends React.Component {
         </div>
         <div className={'card-bottom owner-' + this.state.fields[37].owner} id="p37">
         <div id="board-border-signs-Wilda-district" class="board-border-signsD"></div>
-        <div class="board-border-signs"></div>
         <div class="board-border-littleU"></div>
           <div className="label">{/*Zakłady Cegielskiego*/}</div>
         </div>
