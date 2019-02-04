@@ -19,8 +19,9 @@ class TopFields extends React.Component {
         <div className="card-big top left" id="p10">{/*Izba wytrzeźwień*/}</div>
           <div class="board-border-bigLU"></div>
         <div className={'card-top owner-' + this.state.fields[11].owner} id="p11">
-        <div id="board-border-signs-zoombi" class="board-border-signsU"></div>
         <div class="board-border-littleD"></div>
+        <div id="board-border-signs-zoombi" class="board-border-signsU"></div>
+
           <div className="label">{/* Palmiarnia */}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[12].owner} id="p12">

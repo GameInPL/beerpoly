@@ -18,7 +18,8 @@ class LeftFields extends React.Component {
       <div className="left-box">
       <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[9].owner} id="p9">
-        <div id="board-border-signs-cross" class="board-border-signsL"></div>
+        <div id="board-border-signs-cross" class="board-border-signsL">
+        </div>
           <div className="label">{/*Cmentarz Junikowo*/}</div>
         </div>
         <div class="board-border-littleL"></div>
