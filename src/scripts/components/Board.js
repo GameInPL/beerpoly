@@ -32,7 +32,6 @@ class Board extends React.Component {
   render() {
     return (
       <div className='board' id='board'>
-        <div class="board-border"></div>
         <Players game={this.game} />
         <TopFields game={this.game} />
         <div className='center-box'>

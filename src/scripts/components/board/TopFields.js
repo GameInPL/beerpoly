@@ -17,53 +17,53 @@ class TopFields extends React.Component {
     return (
       <div className="top-box">
         <div className="card-big top left" id="p10">{/*Izba wytrzeźwień*/}</div>
-          <div class="board-border-bigLU"></div>
+          <div class="field-corner-border-left"></div>
         <div className={'card-top owner-' + this.state.fields[11].owner} id="p11">
-        <div class="board-border-littleD"></div>
-        <div class="p-group-zombie board-border-signsU"></div>
+        <div class="field-border"></div>
+        <div class="p-group-zombie p-group"></div>
 
           <div className="label">{/* Palmiarnia */}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[12].owner} id="p12">
-        <div class="p-group-energy board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-energy p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Elektrociepłownia Veolia*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[13].owner} id="p13">
-        <div class="p-group-zombie board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-zombie p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Rynek Łazarski*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[14].owner} id="p14">
-        <div class="p-group-zombie board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-zombie p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Targi Poznańskie*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[15].owner} id="p15">
-          <div class="p-group-bus board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+          <div class="p-group-bus p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Postój taksówek*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[16].owner} id="p16">
-        <div class="p-group-zoo board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-zoo p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Stare Zoor*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[17].owner} id="p17">
-        <div class="board-border-littleD"></div>
+        <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[18].owner} id="p18">
-        <div class="p-group-zoo board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-zoo p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Rynek Jezycki*/}</div>
         </div>
         <div className={'card-top owner-' + this.state.fields[19].owner} id="p19">
-        <div class="p-group-zoo board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
+        <div class="p-group-zoo p-group"></div>
+        <div class="field-border"></div>
           <div className="label">{/*Bałtyk Tower*/}</div>
         </div>
         <div className="card-big top right" id="p20">{/*Okrąglak Punkt Widokowy*/}
-          <div class="board-border-bigRU"></div>
+          <div class="field-corner-border-right"></div>
         </div>
       </div>
     )

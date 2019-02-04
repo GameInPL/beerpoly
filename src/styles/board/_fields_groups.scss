@@ -1,4 +1,29 @@
 .board {
+  .p-group {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    z-index: 1005;
+  }
+
+  .top-box .p-group {
+    margin: 115px 0 0;
+  }
+
+  .right-box .p-group {
+    left: -5px;
+  }
+
+  .left-box .p-group {
+    margin: 50px 0 0 115px;
+  }
+
+  .bottom-box .p-group {
+    top: -5px;
+    right: 2px;
+  }
+
   .p-group-airport {
     background-image: url("/images/board/groups/airport.png");
   }

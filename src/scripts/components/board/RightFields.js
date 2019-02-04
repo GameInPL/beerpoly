@@ -16,47 +16,47 @@ class RightFields extends React.Component {
   render() {
     return (
       <div className="right-box">
-      <div class="board-border-littleR"></div>
+      <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[21].owner} id="p21">
-        <div class="p-group-oldtown board-border-signR"></div>
+        <div class="p-group-oldtown p-group"></div>
           <div className="label">{/*Firharmonia*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[22].owner} id="p22">
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[23].owner} id="p23">
-          <div class="p-group-oldtown board-border-signR"></div>
+          <div class="p-group-oldtown p-group"></div>
           <div className="label">{/*Teatr Wielki*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[24].owner} id="p24">
-        <div class="p-group-oldtown board-border-signR"></div>
+        <div class="p-group-oldtown p-group"></div>
           <div className="label">{/*Zamek Cesarski*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[25].owner} id="p25">
-          <div class="p-group-bus board-border-signR"></div>
+          <div class="p-group-bus p-group"></div>
           <div className="label">{/*Dworzec Poznań Główny*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[26].owner} id="p26">
-        <div class="p-group-oldtown board-border-signR" ></div>
+        <div class="p-group-oldtown p-group" ></div>
           <div className="label">{/*Hotel Bazar*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[27].owner} id="p27">
-        <div class="p-group-oldtown board-border-signR"></div>
+        <div class="p-group-oldtown p-group"></div>
           <div className="label">{/*Bibloteka Raczyńsich*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[28].owner} id="p28">
-        <div class="p-group-energy board-border-signR"></div>
+        <div class="p-group-energy p-group"></div>
           <div className="label">{/*Aquanet*/}</div>
         </div>
-        <div class="board-border-littleR"></div>
+        <div class="field-border"></div>
         <div className={'card-right owner-' + this.state.fields[29].owner} id="p29">
-        <div class="p-group-oldtown board-border-signR"></div>
+        <div class="p-group-oldtown p-group"></div>
           <div className="label">{/*Fara*/}</div>
         </div>
       </div>
