@@ -1,4 +1,6 @@
 @import 'board/players';
+@import 'board/fields_groups';
+@import 'board/fields';
 @import 'board/dice';
 
 .board {
@@ -134,61 +136,6 @@
     top: -5px;
     background-size: 30px;
     z-index: 1005;
-  }
-
-  #board-border-signs-Airport {
-    background-image: url("/images/board/Airport.png");
-  }
-
-  #board-border-signs-zoombi {
-    background-image: url("/images/board/zoombi.png");
-  }
-
-  #board-border-signs-Energy {
-    background-image: url("/images/board/Energy.png");
-  }
-
-  #board-border-signs-Bus-station {
-    background-image: url("/images/board/Bus-station.png");
-  }
-
-  #board-border-signs-Bus-stationL {
-    background-image: url("/images/board/Bus-stationL.png");
-  }
-
-  #board-border-signs-Bus-stationR {
-    background-image: url("/images/board/Bus-stationR.png");
-  }
-
-  #board-border-signs-Bus-stationU {
-    background-image: url("/images/board/Bus-stationU.png");
-  }
-
-  #board-border-signs-new-town {
-    background-image: url("/images/board/new-town.png");
-  }
-
-  #board-border-signs-Old-Town {
-    background-image: url("/images/board/Old-Town.png");
-  }
-
-  #board-border-signs-Wilda-district {
-    background-image: url("/images/board/Wilda-district.png");
-  }
-
-  #board-border-signs-zoo {
-    background-image: url("/images/board/zoo.png");
-  }
-
-  #board-border-signs-cross {
-    background-image: url("/images/board/cross.png");
-  }
-
-  @for $i from 0 to 40 {
-    #p#{$i} {
-      background: url("/images/board/#{$i}.png");
-      background-size: cover;
-    }
   }
 
   .card-big {
