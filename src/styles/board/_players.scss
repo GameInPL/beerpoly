@@ -1,96 +1,57 @@
+#player0,
+#player1,
+#player2,
+#player3,
+#player4,
+#player5 {
+  position: absolute;
+  top: 870px;
+  left: 0;
+  z-index: 1006;
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-size: 40px 40px;
+  background-image: url("/images/motor.png");
+  background-repeat: no-repeat;
+  -webkit-transition: all 10s easy-out;
+  transition: all 0.2s linear;
+  pointer-events: none;
+}
 
 #player0 {
   margin-left: 20px;
   margin-top: 10px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }
 
 #player1 {
   margin-left: 20px;
   margin-top: 40px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }
 
 #player2 {
   margin-left: 20px;
   margin-top: 70px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }
 
 #player3 {
   margin-left: 70px;
   margin-top: 10px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }
 
 #player4 {
   margin-left: 70px;
   margin-top: 40px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }
 
 #player5 {
   margin-left: 70px;
   margin-top: 70px;
-  position: absolute;
-  top:870px;
-  left:0px;
-  width: 60px;
-  height: 60px;
-  z-index: 1006;
-  background: url('/images/motor.png') no-repeat;
-  background-size: 40px 40px;
-  -webkit-transition: all 10s easy-out;
-  transition: all 0.2s linear;
-
+  background-image: url("/images/motor.png");
 }

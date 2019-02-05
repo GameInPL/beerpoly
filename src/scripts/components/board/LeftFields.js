@@ -16,45 +16,48 @@ class LeftFields extends React.Component {
   render() {
     return (
       <div className="left-box">
-      <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[9].owner} id="p9">
-        <div id="board-border-signs-cross" class="board-border-signsL">
+          {/*Cmentarz Junikowo*/}
+          <div class="field-border"></div>
+          <div class="p-group-cross p-group"></div>
         </div>
-          <div className="label">{/*Cmentarz Junikowo*/}</div>
-        </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[8].owner} id="p8">
-        <div id="board-border-signs-cross" class="board-border-signsL"></div>
-          <div className="label">{/*STadion Inea*/}</div>
+          {/*Stadion Inea*/}
+          <div class="field-border"></div>
+          <div class="p-group-cross p-group"></div>
+          <div className="label"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[7].owner} id="p7">
+          {/*Wyzwanie*/}
+          <div class="field-border"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[6].owner} id="p6">
-        <div id="board-border-signs-cross" class="board-border-signsL"></div>
-          <div className="label">{/*Pixel*/}</div>
+          {/*Pixel*/}
+          <div class="field-border"></div>
+          <div class="p-group-cross p-group"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[5].owner} id="p5">
-        <div id="board-border-signs-Bus-stationL" class="board-border-signsL"></div>
-          <div className="label">{/*Pętla Tranwajowwa Grunwalt*/}</div>
+          {/*Pętla Tranwajowwa Grunwalt*/}
+          <div class="field-border"></div>
+          <div class="p-group-bus p-group"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[4].owner} id="p4">
+          {/*Podatek */}
+          <div class="field-border"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[3].owner} id="p3">
-        <div id="board-border-signs-cross" class="board-border-signsL"></div>
-          <div className="label">{/*Kino Biedronka */}</div>
+          {/*Kino Biedronka */}
+          <div class="field-border"></div>
+          <div class="p-group-cross p-group"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[2].owner} id="p2">
+          {/*Szansa */}
+          <div class="field-border"></div>
         </div>
-        <div class="board-border-littleL"></div>
         <div className={'card-left owner-' + this.state.fields[1].owner} id="p1">
-        <div id="board-border-signs-Airport" class="board-border-signsL"></div>
-          <div className="label">{/*Lotnisko Ławica*/}</div>
+          {/*Lotnisko Ławica*/}
+          <div class="field-border"></div>
+          <div class="p-group-airport p-group"></div>
         </div>
       </div>
     )

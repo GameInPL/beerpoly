@@ -1,0 +1,8 @@
+.board {
+  @for $i from 0 to 40 {
+    #p#{$i} {
+      background: url("/images/board/fields/#{$i}.png");
+      background-size: cover;
+    }
+  }
+}

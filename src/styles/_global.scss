@@ -1,5 +1,5 @@
-html,
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: Arial;
@@ -19,12 +19,12 @@ body.lock-interface::after {
   height: 100vh;
 }
 
-#Many{
-    padding: 20px;
-    margin: 20px;
-    display: block;
-    color: #ffffff;
-    background-color: #ffffff05;
+#Many {
+  padding: 20px;
+  margin: 20px;
+  display: block;
+  color: #ffffff;
+  background-color: #ffffff05;
 }
 
 .container {
@@ -42,7 +42,7 @@ button {
   border: 3px solid black;
   padding: 10px 20px;
   font-size: 20px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -50,33 +50,37 @@ button:hover {
   color: white;
   border: 3px solid white;
 }
-
 @keyframes random1 {
   0% {
     background-color: cornflowerblue;
   }
+
   50% {
     background-color: #000;
   }
+
   80% {
     transform: rotate(-1780deg);
   }
+
   100% {
     background-color: cornflowerblue;
     transform: rotate(-1800deg);
   }
 }
-
 @keyframes random2 {
   0% {
     background-color: cornflowerblue;
   }
+
   50% {
     background-color: #000;
   }
+
   80% {
     transform: rotate(1780deg);
   }
+
   100% {
     background-color: cornflowerblue;
     transform: rotate(1800deg);

@@ -16,54 +16,57 @@ class TopFields extends React.Component {
   render() {
     return (
       <div className="top-box">
-        <div className="card-big top left" id="p10">{/*Izba wytrzeźwień*/}</div>
-          <div class="board-border-bigLU"></div>
+        <div className="card-big top left" id="p10">
+          {/*Izba wytrzeźwień*/}
+          <div class="field-corner-border-left"></div>
+        </div>
         <div className={'card-top owner-' + this.state.fields[11].owner} id="p11">
-        <div class="board-border-littleD"></div>
-        <div id="board-border-signs-zoombi" class="board-border-signsU"></div>
-
-          <div className="label">{/* Palmiarnia */}</div>
+          {/* Palmiarnia */}
+          <div class="field-border"></div>
+          <div class="p-group-zombie p-group"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[12].owner} id="p12">
-        <div id="board-border-signs-Energy" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Elektrociepłownia Veolia*/}</div>
+          {/*Elektrociepłownia Veolia*/}
+          <div class="p-group-energy p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[13].owner} id="p13">
-        <div id="board-border-signs-zoombi" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Rynek Łazarski*/}</div>
+          {/*Rynek Łazarski*/}
+          <div class="p-group-zombie p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[14].owner} id="p14">
-        <div id="board-border-signs-zoombi" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Targi Poznańskie*/}</div>
+          {/*Targi Poznańskie*/}
+          <div class="p-group-zombie p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[15].owner} id="p15">
-          <div id="board-border-signs-Bus-stationU" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Postój taksówek*/}</div>
+          {/*Postój taksówek*/}
+          <div class="p-group-bus p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[16].owner} id="p16">
-        <div id="board-border-signs-zoo" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Stare Zoor*/}</div>
+          {/*Stare Zoo*/}
+          <div class="p-group-zoo p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[17].owner} id="p17">
-        <div class="board-border-littleD"></div>
+          {/*Szansa*/}
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[18].owner} id="p18">
-        <div id="board-border-signs-zoo" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Rynek Jezycki*/}</div>
+          {/*Rynek Jezycki*/}
+          <div class="p-group-zoo p-group"></div>
+          <div class="field-border"></div>
         </div>
         <div className={'card-top owner-' + this.state.fields[19].owner} id="p19">
-        <div id="board-border-signs-zoo" class="board-border-signsU"></div>
-        <div class="board-border-littleD"></div>
-          <div className="label">{/*Bałtyk Tower*/}</div>
+          {/*Bałtyk Tower*/}
+          <div class="p-group-zoo p-group"></div>
+          <div class="field-border"></div>
         </div>
-        <div className="card-big top right" id="p20">{/*Okrąglak Punkt Widokowy*/}
-          <div class="board-border-bigRU"></div>
+        <div className="card-big top right" id="p20">
+          {/*Okrąglak Punkt Widokowy*/}
+          <div class="field-corner-border-right"></div>
         </div>
       </div>
     )

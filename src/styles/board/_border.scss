@@ -1,0 +1,62 @@
+.board {
+  .field-border {
+    position: absolute;
+    width: 140px;
+    height: 80px;
+    background-image: url("/images/board/frameL.png");
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .left-box .field-border,
+  .right-box .field-border {
+    width: 140px;
+    height: 80px;
+  }
+
+  .bottom-box .field-border,
+  .top-box .field-border {
+    width: 80px;
+    height: 140px;
+  }
+
+  .left-box .field-border {
+    background-image: url("/images/board/border/left.png");
+  }
+
+  .right-box .field-border {
+    background-image: url("/images/board/border/right.png");
+  }
+
+  .top-box .field-border {
+    background-image: url("/images/board/border/top.png");
+  }
+
+  .bottom-box .field-border {
+    background-image: url("/images/board/border/bottom.png");
+  }
+
+  .field-corner-border-left,
+  .field-corner-border-right {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    z-index: 1000;
+  }
+
+  .top-box .field-corner-border-left {
+    background-image: url("/images/board/border/big-left-top.png");
+  }
+
+  .top-box .field-corner-border-right {
+    background-image: url("/images/board/border/big-right-top.png");
+  }
+
+  .bottom-box .field-corner-border-left {
+    background-image: url("/images/board/border/big-left-bottom.png");
+  }
+
+  .bottom-box .field-corner-border-right {
+    background-image: url("/images/board/border/big-right-bottom.png");
+  }
+}
