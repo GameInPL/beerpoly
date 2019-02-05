@@ -1,4 +1,9 @@
 @mixin hoverButton() {
-  background-color: $button-hover-color;
-  box-shadow: -5px -5px 4px 10px $button-hover-color;
+  @include grayscal(50%);
+}
+
+@mixin grayscal($value) {
+  -webkit-filter: #{"grayscale(#{$value})"};
+  -moz-filter: #{"grayscale(#{$value})"};
+  filter:#{"grayscale(#{$value})"};
 }

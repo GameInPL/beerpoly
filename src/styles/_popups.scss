@@ -1,6 +1,6 @@
-
 .popups {
   text-align: center;
+
   .mask {
     width: 100vw;
     height: 100vh;
@@ -29,27 +29,29 @@
 
     .buttons {
       text-align: center;
+
       .btn {
         display: inline-block;
-        margin: 30px ;
+        margin: 30px;
         background-color: #fff;
         border: 3px solid black;
         padding: 10px 20px;
         font-size: 20px;
-        transition: .3s;
+        transition: 0.3s;
         cursor: pointer;
         user-select: none;
       }
+
       .btn:hover {
         background-color: #000;
         color: white;
         border: 3px solid white;
       }
+
       .btn.disabled {
         background: #777777;
         color: #ffffff;
       }
     }
   }
-
 }
